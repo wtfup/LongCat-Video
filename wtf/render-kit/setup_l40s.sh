@@ -131,14 +131,14 @@ else
   step "Skipping flash-attn (--skip-flash-attn)"
 fi
 
-# --- 5. upstream requirements (apt-only entries filtered: libsndfile1) --------
-step "Installing upstream requirements.txt (apt-only libsndfile1 filtered)"
+# --- 5. upstream requirements (apt-only / unavailable entries filtered) -------
+step "Installing upstream requirements.txt (apt-only libsndfile1 + tritonserverclient filtered)"
 REQ_TMP="$(mktemp -d)"
-grep -v -E '^[[:space:]]*libsndfile1([[:space:]]|==|$)' "$REPO_DIR/requirements.txt" > "$REQ_TMP/requirements.txt"
+grep -v -E '^[[:space:]]*(libsndfile1|tritonserverclient)([[:space:]]|==|$)' "$REPO_DIR/requirements.txt" > "$REQ_TMP/requirements.txt"
 pip install -r "$REQ_TMP/requirements.txt"
 
-step "Installing upstream requirements_avatar.txt (apt-only libsndfile1 filtered)"
-grep -v -E '^[[:space:]]*libsndfile1([[:space:]]|==|$)' "$REPO_DIR/requirements_avatar.txt" > "$REQ_TMP/requirements_avatar.txt"
+step "Installing upstream requirements_avatar.txt (apt-only libsndfile1 + tritonserverclient filtered)"
+grep -v -E '^[[:space:]]*(libsndfile1|tritonserverclient)([[:space:]]|==|$)' "$REPO_DIR/requirements_avatar.txt" > "$REQ_TMP/requirements_avatar.txt"
 pip install -r "$REQ_TMP/requirements_avatar.txt"
 rm -rf "$REQ_TMP"
 
