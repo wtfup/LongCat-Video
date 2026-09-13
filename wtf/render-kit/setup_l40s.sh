@@ -113,11 +113,16 @@ step "Installing torch 2.6.0+cu124 (upstream pin)"
 pip install torch==2.6.0+cu124 torchvision==0.21.0+cu124 torchaudio==2.6.0 \
   --index-url https://download.pytorch.org/whl/cu124
 
-# --- 4. flash-attn (README lines 76-80) --------------------------------------
+# --- 4. flash-attn (README lines 76-80; prebuilt wheel first, source fallback) -
 if [ "$SKIP_FLASH_ATTN" -eq 0 ]; then
-  step "Installing flash-attn 2.7.4.post1 (source build; can take tens of minutes)"
+  step "Installing flash-attn 2.7.4.post1 (prebuilt cu12/torch2.6/cp310 wheel first)"
   pip install ninja psutil packaging
-  if ! pip install flash_attn==2.7.4.post1; then
+  FLASH_WHEEL="https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.4.post1/flash_attn-2.7.4.post1+cu12torch2.6cxx11abiFALSE-cp310-cp310-linux_x86_64.whl"
+  if pip install "$FLASH_WHEEL"; then
+    echo "flash-attn: prebuilt wheel installed"
+  elif pip install --no-build-isolation flash_attn==2.7.4.post1; then
+    echo "flash-attn: source build (--no-build-isolation) succeeded"
+  else
     warn "flash-attn build failed. The model config enables FlashAttention-2 by default;"
     warn "capture the exact compiler error, then either fix the toolchain and re-run, or"
     warn "install xformers and switch the attention backend in the model config."
@@ -126,12 +131,16 @@ else
   step "Skipping flash-attn (--skip-flash-attn)"
 fi
 
-# --- 5. upstream requirements -------------------------------------------------
-step "Installing upstream requirements.txt"
-pip install -r "$REPO_DIR/requirements.txt"
+# --- 5. upstream requirements (apt-only entries filtered: libsndfile1) --------
+step "Installing upstream requirements.txt (apt-only libsndfile1 filtered)"
+REQ_TMP="$(mktemp -d)"
+grep -v -E '^[[:space:]]*libsndfile1([[:space:]]|==|$)' "$REPO_DIR/requirements.txt" > "$REQ_TMP/requirements.txt"
+pip install -r "$REQ_TMP/requirements.txt"
 
-step "Installing upstream requirements_avatar.txt"
-pip install -r "$REPO_DIR/requirements_avatar.txt"
+step "Installing upstream requirements_avatar.txt (apt-only libsndfile1 filtered)"
+grep -v -E '^[[:space:]]*libsndfile1([[:space:]]|==|$)' "$REPO_DIR/requirements_avatar.txt" > "$REQ_TMP/requirements_avatar.txt"
+pip install -r "$REQ_TMP/requirements_avatar.txt"
+rm -rf "$REQ_TMP"
 
 step "Installing HuggingFace download tooling"
 pip install "huggingface_hub[cli]" hf_transfer
