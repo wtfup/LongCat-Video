@@ -1,0 +1,84 @@
+{
+  "checks": {
+    "approvals applied (2 approved -> published, 1 rejected)": true,
+    "audit trail has >= 45 events": true,
+    "drain moved 3 jobs queued -> gated": true,
+    "failure path sets failed": true,
+    "gate scores recorded for every gated/published job": true,
+    "publish touched only approved jobs": true,
+    "requeue returns failed -> queued": true,
+    "retry reaches gated with score": true
+  },
+  "counts": {
+    "approved": 0,
+    "failed": 0,
+    "gated": 1,
+    "published": 2,
+    "queued": 0,
+    "rejected": 1,
+    "rendered": 0,
+    "rendering": 0
+  },
+  "db": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/factory-core/evidence/demo.db",
+  "generated_at": "2026-09-13T11:34:23+00:00",
+  "jobs": {
+    "job_2366005efa4b": {
+      "brand": "EVRYDAY",
+      "created_at": "2026-09-13T11:34:23+00:00",
+      "gate_json": "{\"checks\": {\"black_frame\": \"stub\", \"face_sim\": null, \"integrity\": \"stub\", \"lip_sync_wer\": null, \"silence\": \"stub\"}, \"score\": 0.7414, \"simulated\": true}",
+      "gate_score": 0.7414,
+      "id": "job_2366005efa4b",
+      "language": "english",
+      "notes": "on-brand (demo)",
+      "pillar": "business",
+      "render_path": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/_data/renders/job_2366005efa4b.mp4",
+      "script": null,
+      "status": "published",
+      "title": "D2C launch diary"
+    },
+    "job_5da9e6b287b1": {
+      "brand": "Reboot",
+      "created_at": "2026-09-13T11:34:23+00:00",
+      "gate_json": "{\"checks\": {\"black_frame\": \"stub\", \"face_sim\": null, \"integrity\": \"stub\", \"lip_sync_wer\": null, \"silence\": \"stub\"}, \"score\": 0.8851, \"simulated\": true}",
+      "gate_score": 0.8851,
+      "id": "job_5da9e6b287b1",
+      "language": "hinglish",
+      "notes": "off-brand hook (demo)",
+      "pillar": "ai-systems",
+      "render_path": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/_data/renders/job_5da9e6b287b1.mp4",
+      "script": null,
+      "status": "rejected",
+      "title": "AI stack teardown"
+    },
+    "job_6de97e6fe3c5": {
+      "brand": "WTF Gyms",
+      "created_at": "2026-09-13T11:34:23+00:00",
+      "gate_json": "{\"checks\": {\"black_frame\": \"stub\", \"face_sim\": null, \"integrity\": \"stub\", \"lip_sync_wer\": null, \"silence\": \"stub\"}, \"score\": 0.883, \"simulated\": true}",
+      "gate_score": 0.883,
+      "id": "job_6de97e6fe3c5",
+      "language": "hindi",
+      "notes": "strong hook (demo)",
+      "pillar": "fitness-transformation",
+      "render_path": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/_data/renders/job_6de97e6fe3c5.mp4",
+      "script": null,
+      "status": "published",
+      "title": "Transformation Tuesday hook"
+    },
+    "job_e69fbd191336": {
+      "brand": "WTF Academy",
+      "created_at": "2026-09-13T11:34:23+00:00",
+      "gate_json": "{\"checks\": {\"black_frame\": \"stub\", \"face_sim\": null, \"integrity\": \"stub\", \"lip_sync_wer\": null, \"silence\": \"stub\"}, \"score\": 0.8018, \"simulated\": true}",
+      "gate_score": 0.8018,
+      "id": "job_e69fbd191336",
+      "language": "english",
+      "notes": null,
+      "pillar": "founder-journey",
+      "render_path": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/_data/renders/job_e69fbd191336.mp4",
+      "script": null,
+      "status": "gated",
+      "title": "Failure path demo"
+    }
+  },
+  "live_calls": 0,
+  "status": "SUCCESS"
+}

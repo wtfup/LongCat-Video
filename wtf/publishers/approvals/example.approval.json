@@ -1,0 +1,9 @@
+{
+  "example": true,
+  "channel": "instagram",
+  "approved_by": "Vishal Nigam",
+  "approved_at": "2026-09-13T18:00:00+05:30",
+  "expires_at": "2026-09-20T18:00:00+05:30",
+  "scope": "publish:avatar-short",
+  "notes": "EXAMPLE ONLY. Marked example:true and named example.approval.json so it can never unlock a channel. Copy to <channel>.json (without the example flag) to approve a real window."
+}

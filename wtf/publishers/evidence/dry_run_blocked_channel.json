@@ -1,0 +1,19 @@
+{
+  "accepted": false,
+  "channel": "youtube",
+  "created_at": "2026-09-13T11:46:39+00:00",
+  "dry_run": true,
+  "endpoint": "${upload_url}",
+  "gate_reason": "env_unlock_mismatch+approval_missing",
+  "http_method": "PUT",
+  "job_id": "job-0002",
+  "notes": [
+    "dry-run: zero network calls; no provider request was made",
+    "steps planned: 2"
+  ],
+  "payload_digest": "ee294fafb463214a821ecd40284f43797b7987407da1d98829c2466a66825e8c",
+  "provider_post_id": "dry-run-ee294fafb463",
+  "steps_executed": 0,
+  "steps_planned": 2,
+  "transport": "dry-run"
+}

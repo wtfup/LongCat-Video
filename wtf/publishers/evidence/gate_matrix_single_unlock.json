@@ -1,0 +1,45 @@
+{
+  "decisions": {
+    "facebook": {
+      "approval_ok": false,
+      "approval_path": "/tmp/w5-gate-demo/approvals/facebook.json",
+      "channel": "facebook",
+      "detail": "approval file not found: /tmp/w5-gate-demo/approvals/facebook.json",
+      "env_ok": false,
+      "env_unlock_value": "instagram",
+      "live_allowed": false,
+      "reason": "env_unlock_mismatch+approval_missing"
+    },
+    "instagram": {
+      "approval_ok": true,
+      "approval_path": "/tmp/w5-gate-demo/approvals/instagram.json",
+      "channel": "instagram",
+      "detail": "env PUBLISH_LIVE='instagram' and /tmp/w5-gate-demo/approvals/instagram.json valid",
+      "env_ok": true,
+      "env_unlock_value": "instagram",
+      "live_allowed": true,
+      "reason": ""
+    },
+    "x": {
+      "approval_ok": false,
+      "approval_path": "/tmp/w5-gate-demo/approvals/x.json",
+      "channel": "x",
+      "detail": "approval file not found: /tmp/w5-gate-demo/approvals/x.json",
+      "env_ok": false,
+      "env_unlock_value": "instagram",
+      "live_allowed": false,
+      "reason": "env_unlock_mismatch+approval_missing"
+    },
+    "youtube": {
+      "approval_ok": false,
+      "approval_path": "/tmp/w5-gate-demo/approvals/youtube.json",
+      "channel": "youtube",
+      "detail": "approval file not found: /tmp/w5-gate-demo/approvals/youtube.json",
+      "env_ok": false,
+      "env_unlock_value": "instagram",
+      "live_allowed": false,
+      "reason": "env_unlock_mismatch+approval_missing"
+    }
+  },
+  "env_unlock_var": "PUBLISH_LIVE"
+}

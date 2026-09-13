@@ -1,0 +1,71 @@
+
+==================================== ERRORS ====================================
+_____________________ ERROR collecting tests/test_brain.py _____________________
+ImportError while importing test module '/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/content-brain/tests/test_brain.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_brain.py:12: in <module>
+    import brain
+E   ModuleNotFoundError: No module named 'brain'
+____________________ ERROR collecting tests/test_pillars.py ____________________
+ImportError while importing test module '/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/content-brain/tests/test_pillars.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_pillars.py:9: in <module>
+    import brain
+E   ModuleNotFoundError: No module named 'brain'
+____________________ ERROR collecting tests/test_prompts.py ____________________
+ImportError while importing test module '/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/content-brain/tests/test_prompts.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_prompts.py:7: in <module>
+    import brain
+E   ModuleNotFoundError: No module named 'brain'
+___________________ ERROR collecting tests/test_providers.py ___________________
+ImportError while importing test module '/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/content-brain/tests/test_providers.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_providers.py:9: in <module>
+    from providers import (
+E   ImportError: cannot import name 'GenerationRequest' from 'providers' (/Users/vishalnigammacminioffice/.hermes/hermes-agent/providers/__init__.py)
+____________________ ERROR collecting tests/test_samples.py ____________________
+ImportError while importing test module '/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/content-brain/tests/test_samples.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_samples.py:12: in <module>
+    import brain
+E   ModuleNotFoundError: No module named 'brain'
+__________________ ERROR collecting tests/test_self_audit.py ___________________
+ImportError while importing test module '/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/content-brain/tests/test_self_audit.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_self_audit.py:6: in <module>
+    import self_audit
+E   ModuleNotFoundError: No module named 'self_audit'
+=========================== short test summary info ============================
+ERROR tests/test_brain.py
+ERROR tests/test_pillars.py
+ERROR tests/test_prompts.py
+ERROR tests/test_providers.py
+ERROR tests/test_samples.py
+ERROR tests/test_self_audit.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 6 errors during collection !!!!!!!!!!!!!!!!!!!!
+6 errors in 0.12s

@@ -1,0 +1,65 @@
+{
+  "dark_receipts": [
+    {
+      "channel": "instagram",
+      "dry_run": true,
+      "steps_executed": 0,
+      "transport": "dry-run"
+    },
+    {
+      "channel": "youtube",
+      "dry_run": true,
+      "steps_executed": 0,
+      "transport": "dry-run"
+    },
+    {
+      "channel": "facebook",
+      "dry_run": true,
+      "steps_executed": 0,
+      "transport": "dry-run"
+    },
+    {
+      "channel": "x",
+      "dry_run": true,
+      "steps_executed": 0,
+      "transport": "dry-run"
+    }
+  ],
+  "gate_closed_live_refusals": [
+    {
+      "channel": "instagram",
+      "reason": "live publish refused for 'instagram': env_unlock_missing+approval_missing (approval file n",
+      "refused": true
+    },
+    {
+      "channel": "youtube",
+      "reason": "live publish refused for 'youtube': env_unlock_missing+approval_missing (approval file not",
+      "refused": true
+    },
+    {
+      "channel": "facebook",
+      "reason": "live publish refused for 'facebook': env_unlock_missing+approval_missing (approval file no",
+      "refused": true
+    },
+    {
+      "channel": "x",
+      "reason": "live publish refused for 'x': env_unlock_missing+approval_missing (approval file not found",
+      "refused": true
+    }
+  ],
+  "gate_open_without_credentials": {
+    "error": "missing required credential env var(s) for channel 'instagram': IG_GRAPH_ACCESS_TOKEN, IG_USER_ID (s",
+    "refused": true
+  },
+  "method": "in-process socket guard installed before importing the package; every dark and gate-closed path exercised",
+  "package_attempts_count": 0,
+  "package_socket_attempts": [],
+  "positive_control": {
+    "attempts": [
+      "socket.getaddrinfo"
+    ],
+    "raises": true
+  },
+  "report": "W5 publishers zero-network evidence",
+  "socket_creation_after_restore": true
+}

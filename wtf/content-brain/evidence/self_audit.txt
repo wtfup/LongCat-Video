@@ -1,0 +1,20 @@
+{
+  "package": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/content-brain",
+  "status": "PASS",
+  "deliverables_checked": 24,
+  "missing_required_files": [],
+  "samples_found": 10,
+  "runtime_files_scanned": [
+    "brain.py",
+    "calendar.py",
+    "providers.py"
+  ],
+  "network_imports": [],
+  "secret_findings": [],
+  "live_calls": 0,
+  "secrets_printed": 0,
+  "unverified_claims": 0,
+  "file_count": 40,
+  "total_bytes": 251516,
+  "manifest_files": 40
+}

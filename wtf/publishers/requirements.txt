@@ -1,0 +1,4 @@
+# W5 Publishers — runtime dependencies: Python standard library ONLY.
+# (No third-party runtime deps; http is stdlib urllib behind the dark gate.)
+# Tests use pytest only.
+pytest>=7

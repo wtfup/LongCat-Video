@@ -1,0 +1,40 @@
+$ python calendar.py --days 7 --start 2026-09-14 --enqueue --db evidence/enqueue_demo.db --as-of 2026-09-13T12:00:00+00:00
+===================================================
+2026-09-14 monday slot0 ai_systems ai_systems-01 wtf_gyms
+2026-09-15 tuesday slot0 founder_journey founder_journey-01 wtf_gyms
+2026-09-16 wednesday slot0 wtf_brands wtf_brands-01 wtf_academy
+2026-09-17 thursday slot0 fitness_transformation fitness_transformation-01 wtf_gyms
+2026-09-18 friday slot0 business business-01 wtf_gyms
+2026-09-19 saturday slot0 fitness_transformation fitness_transformation-02 wtf_gyms
+2026-09-20 sunday slot0 wtf_brands wtf_brands-02 everyday
+enqueued 14 jobs for 7 slots into evidence/enqueue_demo.db
+
+$ sqlite3 evidence/enqueue_demo.db 'SELECT COUNT(*) FROM jobs'
+14
+
+$ sqlite3 -header -column evidence/enqueue_demo.db 'SELECT id, pillar, language, status, substr(title,1,40) AS title FROM jobs ORDER BY id LIMIT 8'
+id                                          pillar                  language  status  title                                   
+------------------------------------------  ----------------------  --------  ------  ----------------------------------------
+cb-2026-09-14-ai_systems-01-en              ai_systems              en        queued  The AI receptionist that never sleeps   
+cb-2026-09-14-ai_systems-01-hi              ai_systems              hi        queued  AI receptionist जो कभी नहीं सोता         
+cb-2026-09-15-founder_journey-01-en         founder_journey         en        queued  The boring middle of building something 
+cb-2026-09-15-founder_journey-01-hi         founder_journey         hi        queued  कुछ बड़ा बनाने का boring middle            
+cb-2026-09-16-wtf_brands-01-en              wtf_brands              en        queued  WTF Academy: building India's next gener
+cb-2026-09-16-wtf_brands-01-hi              wtf_brands              hi        queued  WTF Academy: India के अगले trainers तैया   
+cb-2026-09-17-fitness_transformation-01-en  fitness_transformation  en        queued  A transformation is a system — not a mir
+cb-2026-09-17-fitness_transformation-01-hi  fitness_transformation  hi        queued  Transformation एक system है — चमत्कार नह  
+
+$ sqlite3 evidence/enqueue_demo.db 'SELECT language, COUNT(*) FROM jobs GROUP BY language'
+en|7
+hi|7
+
+$ idempotency: re-run enqueue, count must stay 14
+2026-09-14 monday slot0 ai_systems ai_systems-01 wtf_gyms
+2026-09-15 tuesday slot0 founder_journey founder_journey-01 wtf_gyms
+2026-09-16 wednesday slot0 wtf_brands wtf_brands-01 wtf_academy
+2026-09-17 thursday slot0 fitness_transformation fitness_transformation-01 wtf_gyms
+2026-09-18 friday slot0 business business-01 wtf_gyms
+2026-09-19 saturday slot0 fitness_transformation fitness_transformation-02 wtf_gyms
+2026-09-20 sunday slot0 wtf_brands wtf_brands-02 everyday
+enqueued 14 jobs for 7 slots into evidence/enqueue_demo.db
+14

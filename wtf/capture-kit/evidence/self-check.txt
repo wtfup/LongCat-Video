@@ -1,0 +1,12 @@
+  [PASS] WTF_20260914_o1_f_neutral_t1.mp4 -> refs/neutral
+  [PASS] WTF_20260914_o2_f_hindi_mono_t1.mp4 -> face_clips/hindi_mono
+  [PASS] WTF_20260914_o2_f_english_mono_t1.mp4 -> face_clips/english_mono
+  [PASS] WTF_20260914_o3_f_casual_t1.mov -> face_clips/casual
+  [PASS] WTF_20260914_o1_f_still_01.jpg -> refs/still
+  [PASS] WTF_20260914_o1_f_casual_t1.wav -> voice/casual
+  [PASS] unknown extension skipped
+  [PASS] junk ignored
+  [PASS] dry run plans 1 file
+  [PASS] dry run writes nothing
+  [PASS] dry run exit 0
+[capture-kit] self-test: PASS

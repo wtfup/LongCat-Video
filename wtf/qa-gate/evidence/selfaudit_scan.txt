@@ -1,0 +1,8 @@
+== secret scan over deliverables + logs (expect 0) ==
+0 hits
+
+== network primitive scan in gate.py + tests (expect 0) ==
+0 hits
+
+== AWS/git command scan in gate.py (expect 0) ==
+0 hits

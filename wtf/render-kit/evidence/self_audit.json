@@ -1,0 +1,105 @@
+{
+  "root": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/render-kit",
+  "writes": {
+    "tracked_files": 14,
+    "evidence_files": 12,
+    "by_kind": {
+      "docs": 3,
+      "other": 1,
+      "python": 3,
+      "scripts": 3,
+      "tests": 4
+    },
+    "file_list": {
+      "docs": [
+        "README.md",
+        "RUNBOOK.md",
+        "models.md"
+      ],
+      "other": [
+        "requirements.txt"
+      ],
+      "python": [
+        "benchmark.py",
+        "run_avatar.py",
+        "self_audit.py"
+      ],
+      "scripts": [
+        "download_weights.sh",
+        "make_evidence.sh",
+        "setup_l40s.sh"
+      ],
+      "tests": [
+        "tests/conftest.py",
+        "tests/test_benchmark.py",
+        "tests/test_package_contract.py",
+        "tests/test_run_avatar.py"
+      ]
+    },
+    "evidence_list": [
+      "evidence/README.txt",
+      "evidence/bench_receipt.selftest.json",
+      "evidence/bench_selftest.txt",
+      "evidence/download_weights_verify_failclosed.txt",
+      "evidence/download_weights_verify_ok.txt",
+      "evidence/manifest_sha256.txt",
+      "evidence/pytest_run.txt",
+      "evidence/run_avatar_dryrun.txt",
+      "evidence/run_avatar_plan.json",
+      "evidence/run_avatar_preflight_failclosed.txt",
+      "evidence/self_audit.json",
+      "evidence/shell_syntax_checks.txt"
+    ]
+  },
+  "deliverables": {
+    "setup_l40s.sh": {
+      "exists": true,
+      "bytes": 6808,
+      "sha256": "66ed7cecb05b9d67c92ce81f2105d64877cfe41712ec43ac392425cea3a5f856"
+    },
+    "download_weights.sh": {
+      "exists": true,
+      "bytes": 6647,
+      "sha256": "d3eaf6eaac42644d6ce9ff9bb008ef3c89c8ac57f8a3f9ac367be81b5dc5f401"
+    },
+    "run_avatar.py": {
+      "exists": true,
+      "bytes": 16796,
+      "sha256": "9e09568ee96eeafa8bc319aa2af86603fb83ab456dc219925b887cd2017dde23"
+    },
+    "benchmark.py": {
+      "exists": true,
+      "bytes": 26742,
+      "sha256": "e69a28702dd317e26e491966fb404ccf204e43e9f4032ae5c2e5b07611ad90fb"
+    },
+    "models.md": {
+      "exists": true,
+      "bytes": 5823,
+      "sha256": "916a0c44f1437a6e85a7d7f2d5766b611b9fb470f75b18cc3e28313a2305c4e6"
+    },
+    "RUNBOOK.md": {
+      "exists": true,
+      "bytes": 7976,
+      "sha256": "c43c20bba76e9fff6da14a930b432c0d4ef604ff4536d59090add4a2cf0b5e9f"
+    }
+  },
+  "docs_self_audit": {
+    "README.md": {
+      "exists": true,
+      "has_self_audit_heading": true
+    },
+    "models.md": {
+      "exists": true,
+      "has_self_audit_heading": true
+    },
+    "RUNBOOK.md": {
+      "exists": true,
+      "has_self_audit_heading": true
+    }
+  },
+  "secret_scan": {
+    "scope": "all files under root except __pycache__/.pytest_cache and self_audit.py",
+    "findings": [],
+    "clean": true
+  }
+}

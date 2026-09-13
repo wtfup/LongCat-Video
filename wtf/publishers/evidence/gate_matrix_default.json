@@ -1,0 +1,45 @@
+{
+  "decisions": {
+    "facebook": {
+      "approval_ok": false,
+      "approval_path": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/publishers/approvals/facebook.json",
+      "channel": "facebook",
+      "detail": "approval file not found: /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/publishers/approvals/facebook.json",
+      "env_ok": false,
+      "env_unlock_value": "",
+      "live_allowed": false,
+      "reason": "env_unlock_missing+approval_missing"
+    },
+    "instagram": {
+      "approval_ok": false,
+      "approval_path": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/publishers/approvals/instagram.json",
+      "channel": "instagram",
+      "detail": "approval file not found: /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/publishers/approvals/instagram.json",
+      "env_ok": false,
+      "env_unlock_value": "",
+      "live_allowed": false,
+      "reason": "env_unlock_missing+approval_missing"
+    },
+    "x": {
+      "approval_ok": false,
+      "approval_path": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/publishers/approvals/x.json",
+      "channel": "x",
+      "detail": "approval file not found: /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/publishers/approvals/x.json",
+      "env_ok": false,
+      "env_unlock_value": "",
+      "live_allowed": false,
+      "reason": "env_unlock_missing+approval_missing"
+    },
+    "youtube": {
+      "approval_ok": false,
+      "approval_path": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/publishers/approvals/youtube.json",
+      "channel": "youtube",
+      "detail": "approval file not found: /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/publishers/approvals/youtube.json",
+      "env_ok": false,
+      "env_unlock_value": "",
+      "live_allowed": false,
+      "reason": "env_unlock_missing+approval_missing"
+    }
+  },
+  "env_unlock_var": "PUBLISH_LIVE"
+}

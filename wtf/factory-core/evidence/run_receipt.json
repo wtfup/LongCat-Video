@@ -1,0 +1,117 @@
+{
+  "contract_db_path": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/_data/factory.db",
+  "dark_guarantees": {
+    "live_calls": 0,
+    "network_imports": 0,
+    "secrets": 0,
+    "socket_guard_test": "tests/test_no_network.py::test_full_lifecycle_with_socket_guard"
+  },
+  "demo": {
+    "checks": "8/8 PASS",
+    "command": "python -m factory_core.cli demo",
+    "log": "evidence/demo.log",
+    "receipt": "evidence/demo_receipt.json",
+    "status": "SUCCESS"
+  },
+  "file_count": 21,
+  "file_count_manifest": 21,
+  "generated_at": "2026-09-13T11:35:28+00:00",
+  "manifest": {
+    "README.md": {
+      "bytes": 9274,
+      "sha256": "e7fb6ab30d53c87b"
+    },
+    "conftest.py": {
+      "bytes": 260,
+      "sha256": "dbed08a9b3123b6d"
+    },
+    "evidence/demo.db": {
+      "bytes": 28672,
+      "sha256": "6faf69bd1c090b47"
+    },
+    "evidence/demo.log": {
+      "bytes": 5451,
+      "sha256": "6acf93796d6a5374"
+    },
+    "evidence/demo_receipt.json": {
+      "bytes": 3430,
+      "sha256": "1cecb2231b0b95e6"
+    },
+    "evidence/pytest_output.txt": {
+      "bytes": 5580,
+      "sha256": "8d3c143ffcac973a"
+    },
+    "evidence/pytest_output_py39.txt": {
+      "bytes": 99,
+      "sha256": "779baa3c67465dbc"
+    },
+    "factory_core/__init__.py": {
+      "bytes": 1183,
+      "sha256": "9ed7e7322c617dd9"
+    },
+    "factory_core/__main__.py": {
+      "bytes": 166,
+      "sha256": "4f5c0d2eb4f003f8"
+    },
+    "factory_core/adapters.py": {
+      "bytes": 7321,
+      "sha256": "387b35bc00fdac73"
+    },
+    "factory_core/cli.py": {
+      "bytes": 18300,
+      "sha256": "d7d024bd409a3eb0"
+    },
+    "factory_core/jobqueue.py": {
+      "bytes": 17273,
+      "sha256": "99d9aa42de9d4077"
+    },
+    "factory_core/pipeline.py": {
+      "bytes": 8019,
+      "sha256": "c52c85dfc3fc4ce6"
+    },
+    "pyproject.toml": {
+      "bytes": 521,
+      "sha256": "c8a70747fb95f4c9"
+    },
+    "requirements.txt": {
+      "bytes": 439,
+      "sha256": "b7886c1f6782d033"
+    },
+    "tests/conftest.py": {
+      "bytes": 465,
+      "sha256": "542d9a6a4ed027a5"
+    },
+    "tests/test_adapters.py": {
+      "bytes": 5433,
+      "sha256": "f8223f1d69a69c9a"
+    },
+    "tests/test_cli.py": {
+      "bytes": 6118,
+      "sha256": "63ae6c1cdab37649"
+    },
+    "tests/test_jobqueue.py": {
+      "bytes": 12239,
+      "sha256": "4427c7a8385eee85"
+    },
+    "tests/test_no_network.py": {
+      "bytes": 2924,
+      "sha256": "7168629f5c7a0555"
+    },
+    "tests/test_pipeline.py": {
+      "bytes": 6953,
+      "sha256": "ede555d76bbf21f1"
+    }
+  },
+  "manifest_note": "manifest excludes evidence/run_receipt.json (this file) and transient caches",
+  "package": "wtf/factory-core (W1)",
+  "status": "SUCCESS",
+  "tests": {
+    "command_py311": "uv run --no-project --with pytest python -m pytest",
+    "command_py39": "uv run --no-project --with pytest --python /usr/bin/python3 python -m pytest",
+    "exit_py311": 0,
+    "exit_py39": 0,
+    "result_py311": "63 passed in 0.37s",
+    "result_py39": "63 passed in 0.57s"
+  },
+  "worker": "W1 Factory Core"
+}

@@ -1,0 +1,13 @@
+[capture-kit] RUN — source=/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw dest=/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/assets-root mode=copy validate=True
+  voice       assets/voice/WTF_20260914_o1_f_casual_t1.wav <- /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw/WTF_20260914_o1_f_casual_t1.wav
+  refs        assets/refs/WTF_20260914_o1_f_neutral_t1.mp4 <- /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw/WTF_20260914_o1_f_neutral_t1.mp4
+  refs        assets/refs/WTF_20260914_o1_f_still_01.jpg <- /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw/WTF_20260914_o1_f_still_01.jpg
+  face_clips  assets/face_clips/WTF_20260914_o2_f_hindi_mono_t1.mp4 <- /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw/WTF_20260914_o2_f_hindi_mono_t1.mp4
+  skip      /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw/session_notes.pdf (unrecognized-extension)
+  ignore    /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw/.DS_Store (system-junk)
+  warn      duration-out-of-range: duration 3.0s outside expected 300-1800s for casual
+  warn      duration-out-of-range: duration 2.0s outside expected 60-240s for hindi_mono
+  warn      resolution-below-1080p: width 320px below 1920px — re-shoot at 4K (or 1080p minimum)
+  warn      fps-below-24: fps 10.0 below 24 — check camera frame-rate setting
+  summary: seen=6 ingested=4 deduped=0 skipped=1 ignored=1 errors=0 warnings=4
+  manifest: /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/assets-root/manifest.json

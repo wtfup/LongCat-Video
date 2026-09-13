@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "codes": [
+        "probe_failed"
+      ],
+      "detail": "[mov,mp4,m4a,3gp,3g2,mj2 @ 0xa4300c000] moov atom not found\n/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/evidence/demo_media/corrupt.mp4: Invalid data found when processing input",
+      "id": "integrity",
+      "required": true,
+      "score": null,
+      "status": "fail",
+      "value": {
+        "audio_codec": null,
+        "decode_errors": null,
+        "duration_s": null,
+        "has_audio": false,
+        "has_video": false,
+        "probe_ok": false,
+        "video_codec": null
+      },
+      "weight": 0.0
+    },
+    {
+      "codes": [],
+      "detail": "skipped: probe failed",
+      "id": "black_frames",
+      "required": true,
+      "score": null,
+      "status": "skipped",
+      "value": {},
+      "weight": 1.0
+    },
+    {
+      "codes": [],
+      "detail": "skipped: probe failed",
+      "id": "silence",
+      "required": true,
+      "score": null,
+      "status": "skipped",
+      "value": {},
+      "weight": 1.0
+    },
+    {
+      "codes": [],
+      "detail": "skipped: probe failed",
+      "id": "loudness",
+      "required": false,
+      "score": null,
+      "status": "skipped",
+      "value": {},
+      "weight": 0.5
+    },
+    {
+      "codes": [],
+      "detail": "skipped: probe failed",
+      "id": "lip_sync_wer",
+      "required": false,
+      "score": null,
+      "status": "skipped",
+      "value": {},
+      "weight": 3.0
+    },
+    {
+      "codes": [],
+      "detail": "skipped: probe failed",
+      "id": "face_sim",
+      "required": false,
+      "score": null,
+      "status": "skipped",
+      "value": {},
+      "weight": 3.0
+    }
+  ],
+  "codes": [
+    "probe_failed"
+  ],
+  "duration_s": null,
+  "evaluated_at": "2026-09-13T11:40:43Z",
+  "expected_duration_s": null,
+  "gate_id": "wtf-qa-gate-v1",
+  "gate_version": "1.0.0",
+  "policy_id": "wtf-qa-gate-v1",
+  "policy_parser": "pyyaml",
+  "policy_sha256": "ee0966214a9c992770b73efe800d26a23db7b2f3f500abf74c0b8c8407c987c4",
+  "probe": {
+    "audio_codec": null,
+    "decode_errors": null,
+    "decode_ok": null,
+    "duration_s": null,
+    "error": "probe_failed",
+    "has_audio": false,
+    "has_video": false,
+    "ok": false,
+    "raw_error": "[mov,mp4,m4a,3gp,3g2,mj2 @ 0xa4300c000] moov atom not found\n/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/evidence/demo_media/corrupt.mp4: Invalid data found when processing input",
+    "video_codec": null
+  },
+  "reasons": [
+    "integrity: probe_failed \u2014 [mov,mp4,m4a,3gp,3g2,mj2 @ 0xa4300c000] moov atom not found\n/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/evidence/demo_media/corrupt.mp4: Invalid data found when processing input"
+  ],
+  "score": null,
+  "score_basis": {
+    "available_weight": 0,
+    "scored": [],
+    "total_weight": 8.5
+  },
+  "verdict": "reject",
+  "video": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/evidence/demo_media/corrupt.mp4",
+  "video_sha256": "4f80d917a73a62c90768839d2f1c76fac8e34282f77a40d5503d63f84a0a88b1"
+}

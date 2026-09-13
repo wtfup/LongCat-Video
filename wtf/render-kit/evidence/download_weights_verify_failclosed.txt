@@ -1,0 +1,20 @@
+
+==> Verifying expected layout under /Users/vishalnigammacminioffice/wtf-avatar-factory/weights
+-- avatar checkpoint: /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video-Avatar-1.5
+  MISS /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video-Avatar-1.5/base_model_int8/config.json   (int8 DiT config (--use_int8))
+  MISS /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video-Avatar-1.5/base_model_int8/*.safetensors (int8 DiT weights; --use_int8)
+  MISS /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video-Avatar-1.5/lora/dmd_lora.safetensors   (distill LoRA (--use_distill, required for v1.5))
+  MISS /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video-Avatar-1.5/scheduler   (v1.5 scheduler)
+  MISS /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video-Avatar-1.5/whisper-large-v3   (Whisper-large-v3 audio encoder (v1.5))
+  MISS /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video-Avatar-1.5/vocal_separator/Kim_Vocal_2.onnx   (vocal separator (upstream line 147))
+-- shared foundation: /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video
+  MISS /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video/tokenizer   (UMT5 tokenizer)
+  MISS /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video/text_encoder   (UMT5 text encoder)
+  MISS /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video/vae   (Wan VAE)
+WARN: Layout INCOMPLETE — the missing paths above are read by upstream code:
+WARN:   run_demo_avatar_single_audio_to_video.py (int8 DiT, dmd LoRA, whisper,
+WARN:   scheduler, vocal separator) and checkpoint_dir/../LongCat-Video for the
+WARN:   tokenizer/text_encoder/vae. If the HF repo layout differs, inspect the repo
+WARN:   file list and record the exact deviation in evidence/ — do NOT run renders
+WARN:   against a partial layout (run_avatar.py will refuse anyway).
+EXIT=1

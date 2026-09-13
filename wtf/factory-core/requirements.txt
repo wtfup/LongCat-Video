@@ -1,0 +1,11 @@
+# factory-core (W1) - dependency notes
+#
+# RUNTIME: Python 3.9+ standard library only.
+#   sqlite3, argparse, json, uuid, dataclasses, pathlib, datetime, hashlib, os, sys, time, typing
+#   -> zero third-party runtime deps; zero network calls.
+#
+# TEST-TIME (not required to run the factory code):
+pytest==9.1.1
+#
+# Clean invocation that needs no venv (uv resolves pytest from cache):
+#   uv run --no-project --with pytest python -m pytest

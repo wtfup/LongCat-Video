@@ -1,0 +1,16 @@
+W5 bypass probe — fresh process, shipped approvals dir
+==============================================================
+instagram  refused as expected
+youtube    refused as expected
+facebook   refused as expected
+x          refused as expected
+PUBLISH_LIVE='all'                    OK blocked (env_unlock_mismatch)
+PUBLISH_LIVE='*'                      OK blocked (env_unlock_mismatch)
+PUBLISH_LIVE='true'                   OK blocked (env_unlock_mismatch)
+PUBLISH_LIVE='youtube,youtube'        OK blocked (env_unlock_mismatch)
+PUBLISH_LIVE='YOUTUBE'                OK blocked (env_unlock_mismatch)
+PUBLISH_LIVE=' youtube!'              OK blocked (env_unlock_mismatch)
+PUBLISH_LIVE='youtube/../youtube'     OK blocked (env_unlock_mismatch)
+PUBLISH_LIVE='youtube' (exact)   access=UNLOCKED
+==============================================================
+zero network: this probe performed no socket calls (refusals only)

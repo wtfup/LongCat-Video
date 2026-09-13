@@ -1,0 +1,93 @@
+# WTF Avatar Factory - factory-core offline demo (W1, schema v1)
+# db: /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/factory-core/evidence/demo.db
+# dark flags: DARK=True LIVE_ENABLED=False NETWORK_ENABLED=False
+
+== 1. queue jobs ==
+  + job_6de97e6fe3c5  WTF Gyms   hindi     Transformation Tuesday hook
+  + job_2366005efa4b  EVRYDAY    english   D2C launch diary
+  + job_5da9e6b287b1  Reboot     hinglish  AI stack teardown
+
+== 2. pipeline drain (render -> gate) ==
+  stage=voice   ok=True  mode=dark dark voice stub (no TTS, no file)
+  stage=render  ok=True  mode=dark dark render stub (LongCat-Avatar int8+distill runs on the L40S box)
+  stage=gate    ok=True  mode=dark dark gate stub (deterministic pseudo-score 0.883)
+  stage=voice   ok=True  mode=dark dark voice stub (no TTS, no file)
+  stage=render  ok=True  mode=dark dark render stub (LongCat-Avatar int8+distill runs on the L40S box)
+  stage=gate    ok=True  mode=dark dark gate stub (deterministic pseudo-score 0.7414)
+  stage=voice   ok=True  mode=dark dark voice stub (no TTS, no file)
+  stage=render  ok=True  mode=dark dark render stub (LongCat-Avatar int8+distill runs on the L40S box)
+  stage=gate    ok=True  mode=dark dark gate stub (deterministic pseudo-score 0.8851)
+  - job_6de97e6fe3c5 -> gated  gate_score=0.883
+  - job_2366005efa4b -> gated  gate_score=0.7414
+  - job_5da9e6b287b1 -> gated  gate_score=0.8851
+
+== 3. operator decisions ==
+  approve job_6de97e6fe3c5 -> approved
+  approve job_2366005efa4b -> approved
+  reject  job_5da9e6b287b1 -> rejected
+
+== 4. publish approved ==
+  stage=publish ok=True  mode=dark dark publish stub (real channels live in wtf/publishers, approval-gated)
+  stage=publish ok=True  mode=dark dark publish stub (real channels live in wtf/publishers, approval-gated)
+  - job_6de97e6fe3c5 -> published
+  - job_2366005efa4b -> published
+
+== 5. failure + requeue + retry path ==
+  stage=voice   ok=True  mode=dark dark voice stub (no TTS, no file)
+  stage=render  ok=False mode=dark simulated render failure (demo scenario, dark)
+  -> job_e69fbd191336 FAILED (render: simulated render failure (demo scenario, dark))
+  - job_e69fbd191336 -> failed (simulated render failure)
+  - job_e69fbd191336 -> queued (requeued)
+  stage=voice   ok=True  mode=dark dark voice stub (no TTS, no file)
+  stage=render  ok=True  mode=dark dark render stub (LongCat-Avatar int8+distill runs on the L40S box)
+  stage=gate    ok=True  mode=dark dark gate stub (deterministic pseudo-score 0.8018)
+  - job_e69fbd191336 -> gated  gate_score=0.8018
+  note: job_e69fbd191336 intentionally left 'gated' for the console approval queue
+
+== 6. event trail for job_e69fbd191336 (failure -> requeue -> retry) ==
+  [ 40] 2026-09-13T11:34:23+00:00  created        {"status": "queued"}
+  [ 41] 2026-09-13T11:34:23+00:00  status_change  {"from": "queued", "reason": "pipeline start", "to": "rendering"}
+  [ 42] 2026-09-13T11:34:23+00:00  stage_start    {"stage": "voice"}
+  [ 43] 2026-09-13T11:34:23+00:00  stage_done     {"detail": "dark voice stub (no TTS, no file)", "duration_s": 0.0001, "mode": "dark", "stage": "voice"}
+  [ 44] 2026-09-13T11:34:23+00:00  stage_start    {"stage": "render"}
+  [ 45] 2026-09-13T11:34:23+00:00  stage_error    {"error": "simulated render failure (demo scenario, dark)", "stage": "render"}
+  [ 46] 2026-09-13T11:34:23+00:00  status_change  {"from": "rendering", "reason": "render: simulated render failure (demo scenario, dark)", "to": "failed"}
+  [ 47] 2026-09-13T11:34:23+00:00  status_change  {"from": "failed", "reason": "retry after simulated failure (demo)", "to": "queued"}
+  [ 48] 2026-09-13T11:34:23+00:00  status_change  {"from": "queued", "reason": "pipeline start", "to": "rendering"}
+  [ 49] 2026-09-13T11:34:23+00:00  stage_start    {"stage": "voice"}
+  [ 50] 2026-09-13T11:34:23+00:00  stage_done     {"detail": "dark voice stub (no TTS, no file)", "duration_s": 0.0001, "mode": "dark", "stage": "voice"}
+  [ 51] 2026-09-13T11:34:23+00:00  stage_start    {"stage": "render"}
+  [ 52] 2026-09-13T11:34:23+00:00  stage_done     {"detail": "dark render stub (LongCat-Avatar int8+distill runs on the L40S box)", "duration_s": 0.0001, "mode": "dark", "stage": "render"}
+  [ 53] 2026-09-13T11:34:23+00:00  status_change  {"from": "rendering", "reason": "render stage done", "to": "rendered"}
+  [ 54] 2026-09-13T11:34:23+00:00  stage_start    {"stage": "gate"}
+  [ 55] 2026-09-13T11:34:23+00:00  stage_done     {"detail": "dark gate stub (deterministic pseudo-score 0.8018)", "duration_s": 0.0001, "mode": "dark", "stage": "gate"}
+  [ 56] 2026-09-13T11:34:23+00:00  status_change  {"from": "rendered", "reason": "gate stage done", "to": "gated"}
+
+== 7. final counts ==
+  queued     0
+  rendering  0
+  rendered   0
+  gated      1
+  approved   0
+  rejected   1
+  published  2
+  failed     0
+
+== checks ==
+  PASS  drain moved 3 jobs queued -> gated
+  PASS  approvals applied (2 approved -> published, 1 rejected)
+  PASS  publish touched only approved jobs
+  PASS  failure path sets failed
+  PASS  requeue returns failed -> queued
+  PASS  retry reaches gated with score
+  PASS  gate scores recorded for every gated/published job
+  PASS  audit trail has >= 45 events
+
+STATUS: SUCCESS
+
+## 5. Self-audit
+- writes: 3 files (demo.db, demo_receipt.json, demo.log)
+- live calls: 0 (all adapters dark stubs; demo runs offline)
+- secrets printed: 0
+- unverified claims: 0 (every check above is computed from the demo database)
+- status: SUCCESS

@@ -1,0 +1,24 @@
+{
+  "candidates": [
+    {
+      "codes": [
+        "black_ratio_exceeded"
+      ],
+      "eligible": false,
+      "path": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/evidence/demo_media/black.mp4",
+      "score": 60.0,
+      "verdict": "reject"
+    },
+    {
+      "codes": [],
+      "eligible": true,
+      "path": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/evidence/demo_media/good.mp4",
+      "score": 100.0,
+      "verdict": "accept"
+    }
+  ],
+  "policy_id": "wtf-qa-gate-v1",
+  "reason": "winner_selected",
+  "winner": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/evidence/demo_media/good.mp4",
+  "winner_index": 1
+}

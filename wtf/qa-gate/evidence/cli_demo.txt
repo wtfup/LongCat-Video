@@ -1,0 +1,48 @@
+$ python gate.py selftest
+ffprobe: /opt/homebrew/bin/ffprobe
+  ffprobe version 8.0.1 Copyright (c) 2007-2025 the FFmpeg developers
+ffmpeg: /opt/homebrew/bin/ffmpeg
+  ffmpeg version 8.0.1 Copyright (c) 2000-2025 the FFmpeg developers
+policy: wtf-qa-gate-v1 @ /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/policy.yaml
+exit=0
+
+$ python gate.py score --video evidence/demo_media/good.mp4 --json evidence/report_good.json
+verdict: accept  score: 100.0
+video: /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/evidence/demo_media/good.mp4  (3.0s)
+  - integrity: pass
+  - black_frames: pass
+  - silence: pass
+  - loudness: pass
+  - lip_sync_wer: unavailable
+  - face_sim: unavailable
+exit=0
+
+$ python gate.py score --video evidence/demo_media/black.mp4 --json evidence/report_black.json
+verdict: reject  score: 60.0
+video: /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/evidence/demo_media/black.mp4  (3.0s)
+  - integrity: pass
+  - black_frames: fail [black_ratio_exceeded]
+  - silence: pass
+  - loudness: pass
+  - lip_sync_wer: unavailable
+  - face_sim: unavailable
+  ! black_frames: black_ratio_exceeded — black 2.90s of 3.00s (ratio 0.967)
+exit=2
+
+$ python gate.py score --video evidence/demo_media/corrupt.mp4 --json evidence/report_corrupt.json
+verdict: reject  score: None
+video: /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/evidence/demo_media/corrupt.mp4  (n/a)
+  - integrity: fail [probe_failed]
+  - black_frames: skipped
+  - silence: skipped
+  - loudness: skipped
+  - lip_sync_wer: skipped
+  - face_sim: skipped
+  ! integrity: probe_failed — [mov,mp4,m4a,3gp,3g2,mj2 @ 0xa4300c000] moov atom not found
+/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/evidence/demo_media/corrupt.mp4: Invalid data found when processing input
+exit=2
+
+$ python gate.py bestof --candidates black,good --json evidence/selection_bestof.json
+winner: /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/evidence/demo_media/good.mp4
+  score: 100.0
+exit=0

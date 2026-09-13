@@ -1,0 +1,220 @@
+{
+  "schema": "wtf.capture-kit.manifest/v1",
+  "tool": "wtf-capture-kit/intake.py",
+  "created_at": "2026-09-13T11:34:00+00:00",
+  "source_root": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw",
+  "dest_root": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/assets-root",
+  "mode": "copy",
+  "validate": true,
+  "hash_files": true,
+  "files": [
+    {
+      "src": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw/WTF_20260914_o1_f_casual_t1.wav",
+      "dst": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/assets-root/assets/voice/WTF_20260914_o1_f_casual_t1.wav",
+      "rel": "assets/voice/WTF_20260914_o1_f_casual_t1.wav",
+      "bucket": "voice",
+      "content": "casual",
+      "outfit": "o1",
+      "angle": "front",
+      "take": 1,
+      "classified_by": "token",
+      "sha256": "5cffdd4793d2c7986a33d893ef9f6e29f84420b47f145c3669ecc971581941e7",
+      "bytes": 288044,
+      "probe": {
+        "ok": true,
+        "error": null,
+        "duration_s": 3.0,
+        "has_video": false,
+        "has_audio": true,
+        "width": null,
+        "height": null,
+        "fps": null,
+        "vcodec": null,
+        "acodec": "pcm_s16le",
+        "sample_rate": 48000,
+        "channels": 1,
+        "format_name": "wav"
+      },
+      "checks": [
+        {
+          "id": "audio-extension-wins",
+          "level": "info",
+          "msg": "audio extension routes to voice/ regardless of content token"
+        },
+        {
+          "id": "duration-out-of-range",
+          "level": "warn",
+          "msg": "duration 3.0s outside expected 300-1800s for casual"
+        }
+      ],
+      "dedupe_existing": false
+    },
+    {
+      "src": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw/WTF_20260914_o1_f_neutral_t1.mp4",
+      "dst": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/assets-root/assets/refs/WTF_20260914_o1_f_neutral_t1.mp4",
+      "rel": "assets/refs/WTF_20260914_o1_f_neutral_t1.mp4",
+      "bucket": "refs",
+      "content": "neutral",
+      "outfit": "o1",
+      "angle": "front",
+      "take": 1,
+      "classified_by": "token",
+      "sha256": "34e3859e1a08f8c4ef248076b449bd4bcbe995f3be9906220e5def41eca35971",
+      "bytes": 1846119,
+      "probe": {
+        "ok": true,
+        "error": null,
+        "duration_s": 8.5,
+        "has_video": true,
+        "has_audio": false,
+        "width": 1920,
+        "height": 1080,
+        "fps": 30.0,
+        "vcodec": "mpeg4",
+        "acodec": null,
+        "sample_rate": null,
+        "channels": null,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "checks": [
+        {
+          "id": "resolution-not-4k",
+          "level": "info",
+          "msg": "width 1920px \u2014 spec target is 4K 3840px"
+        }
+      ],
+      "dedupe_existing": false
+    },
+    {
+      "src": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw/WTF_20260914_o1_f_still_01.jpg",
+      "dst": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/assets-root/assets/refs/WTF_20260914_o1_f_still_01.jpg",
+      "rel": "assets/refs/WTF_20260914_o1_f_still_01.jpg",
+      "bucket": "refs",
+      "content": "still",
+      "outfit": "o1",
+      "angle": "front",
+      "take": null,
+      "classified_by": "token",
+      "sha256": "561bf96e7314d08e7661f80bb9025175bdce6b044f3142d9031a6684b6184a85",
+      "bytes": 58627,
+      "probe": {
+        "ok": true,
+        "error": null,
+        "duration_s": 0.04,
+        "has_video": true,
+        "has_audio": false,
+        "width": 1920,
+        "height": 1080,
+        "fps": 25.0,
+        "vcodec": "mjpeg",
+        "acodec": null,
+        "sample_rate": null,
+        "channels": null,
+        "format_name": "image2"
+      },
+      "checks": [
+        {
+          "id": "resolution-not-4k",
+          "level": "info",
+          "msg": "width 1920px \u2014 spec target is 4K 3840px"
+        }
+      ],
+      "dedupe_existing": false
+    },
+    {
+      "src": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw/WTF_20260914_o2_f_hindi_mono_t1.mp4",
+      "dst": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/assets-root/assets/face_clips/WTF_20260914_o2_f_hindi_mono_t1.mp4",
+      "rel": "assets/face_clips/WTF_20260914_o2_f_hindi_mono_t1.mp4",
+      "bucket": "face_clips",
+      "content": "hindi_mono",
+      "outfit": "o2",
+      "angle": "front",
+      "take": 1,
+      "classified_by": "token",
+      "sha256": "ef46361f0f97dee37ccfd67d8943573d1ce3c68745e55c5a2228401c7f8008f1",
+      "bytes": 26241,
+      "probe": {
+        "ok": true,
+        "error": null,
+        "duration_s": 2.0,
+        "has_video": true,
+        "has_audio": false,
+        "width": 320,
+        "height": 240,
+        "fps": 10.0,
+        "vcodec": "mpeg4",
+        "acodec": null,
+        "sample_rate": null,
+        "channels": null,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "checks": [
+        {
+          "id": "duration-out-of-range",
+          "level": "warn",
+          "msg": "duration 2.0s outside expected 60-240s for hindi_mono"
+        },
+        {
+          "id": "resolution-below-1080p",
+          "level": "warn",
+          "msg": "width 320px below 1920px \u2014 re-shoot at 4K (or 1080p minimum)"
+        },
+        {
+          "id": "fps-below-24",
+          "level": "warn",
+          "msg": "fps 10.0 below 24 \u2014 check camera frame-rate setting"
+        }
+      ],
+      "dedupe_existing": false
+    }
+  ],
+  "skipped": [
+    {
+      "src": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw/session_notes.pdf",
+      "reason": "unrecognized-extension"
+    }
+  ],
+  "ignored": [
+    {
+      "src": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw/.DS_Store",
+      "reason": "system-junk"
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "src": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw/WTF_20260914_o1_f_casual_t1.wav",
+      "check_id": "duration-out-of-range",
+      "msg": "duration 3.0s outside expected 300-1800s for casual"
+    },
+    {
+      "src": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw/WTF_20260914_o2_f_hindi_mono_t1.mp4",
+      "check_id": "duration-out-of-range",
+      "msg": "duration 2.0s outside expected 60-240s for hindi_mono"
+    },
+    {
+      "src": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw/WTF_20260914_o2_f_hindi_mono_t1.mp4",
+      "check_id": "resolution-below-1080p",
+      "msg": "width 320px below 1920px \u2014 re-shoot at 4K (or 1080p minimum)"
+    },
+    {
+      "src": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit/evidence/demo/raw/WTF_20260914_o2_f_hindi_mono_t1.mp4",
+      "check_id": "fps-below-24",
+      "msg": "fps 10.0 below 24 \u2014 check camera frame-rate setting"
+    }
+  ],
+  "summary": {
+    "seen": 6,
+    "ingested": 4,
+    "deduped": 0,
+    "skipped": 1,
+    "ignored": 1,
+    "errors": 0,
+    "warnings": 4,
+    "by_bucket": {
+      "refs": 2,
+      "voice": 1,
+      "face_clips": 1
+    }
+  }
+}

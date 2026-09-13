@@ -1,0 +1,41 @@
+== gate_job() per job ==
+{
+  "job_id": "demo-001",
+  "status": "gated",
+  "score": 100.0,
+  "verdict": "accept",
+  "codes": []
+}
+{
+  "job_id": "demo-002",
+  "status": "rejected",
+  "score": 60.0,
+  "verdict": "reject",
+  "codes": [
+    "black_ratio_exceeded"
+  ]
+}
+{
+  "job_id": "demo-003",
+  "status": "rejected",
+  "score": 40.0,
+  "verdict": "reject",
+  "codes": [
+    "silence_ratio_exceeded",
+    "loudness_below_floor"
+  ]
+}
+
+== resulting jobs rows ==
+{"id": "demo-001", "status": "gated", "gate_score": 100.0, "gate_json_head": "{\"checks\": [{\"codes\": [], \"detail\": \"\", \"id\": \"integrity\", \"required\": true, \"score\": 1.0,"}
+{"id": "demo-002", "status": "rejected", "gate_score": 60.0, "gate_json_head": "{\"checks\": [{\"codes\": [], \"detail\": \"\", \"id\": \"integrity\", \"required\": true, \"score\": 1.0,"}
+{"id": "demo-003", "status": "rejected", "gate_score": 40.0, "gate_json_head": "{\"checks\": [{\"codes\": [], \"detail\": \"\", \"id\": \"integrity\", \"required\": true, \"score\": 1.0,"}
+
+== resulting events rows ==
+{"job_id": "demo-001", "event": "gate_passed", "meta": "{\"codes\": [], \"policy_id\": \"wtf-qa-gate-v1\", \"score\": 100.0}"}
+{"job_id": "demo-002", "event": "gate_rejected", "meta": "{\"codes\": [\"black_ratio_exceeded\"], \"policy_id\": \"wtf-qa-gate-v1\", \"score\": 60.0}"}
+{"job_id": "demo-003", "event": "gate_rejected", "meta": "{\"codes\": [\"silence_ratio_exceeded\", \"loudness_below_floor\"], \"policy_id\": \"wtf-qa-gate-v1\", \"score\": 40.0}"}
+
+== fail-closed checks ==
+unknown_job: blocked -> unknown_job: ghost
+accept requires numeric score: blocked -> invalid_report: accept verdict requires a numeric score

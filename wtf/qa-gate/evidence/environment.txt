@@ -1,0 +1,12 @@
+run_at_utc: 2026-09-13T11:40:28Z
+package_dir: /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate
+python: Python 3.11.14
+ffprobe version 8.0.1 Copyright (c) 2007-2025 the FFmpeg developers
+ffmpeg version 8.0.1 Copyright (c) 2000-2025 the FFmpeg developers
+============================== 72 passed in 6.04s ==============================
+pytest_rc=0
+pytest_uv_bare_rc=0
+72 passed in 6.59s
+policy_parser(venv): pyyaml
+policy_parser(bare): builtin
+db_demo_rc=0

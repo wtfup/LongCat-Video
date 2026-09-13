@@ -1,0 +1,1431 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF           [100%]
+=================================== FAILURES ===================================
+____________________ test_winner_is_not_the_first_candidate ____________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_winner_is_not_the_first_candidate(clips):
+>       sel = gate.select_best_of_n([str(clips["black"]), str(clips["good"])])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_bestofn.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+candidates = ['/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.m.../private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good.mp4']
+policy = None, expect_duration = None, scorers = None
+
+    def select_best_of_n(
+        candidates: list,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:99: NotImplementedError
+_____________________ test_all_ineligible_yields_no_winner _____________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_all_ineligible_yields_no_winner(clips):
+>       sel = gate.select_best_of_n(
+            [str(clips["black"]), str(clips["silent"]), str(clips["corrupt"])]
+        )
+
+tests/test_bestofn.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+candidates = ['/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.m...ivate/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/corrupt.mp4']
+policy = None, expect_duration = None, scorers = None
+
+    def select_best_of_n(
+        candidates: list,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:99: NotImplementedError
+______________________ test_tie_breaks_to_earliest_index _______________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_tie_breaks_to_earliest_index(clips):
+>       sel = gate.select_best_of_n([str(clips["good"]), str(clips["good2"])])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_bestofn.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+candidates = ['/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good.mp...ate/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good_twin.mp4']
+policy = None, expect_duration = None, scorers = None
+
+    def select_best_of_n(
+        candidates: list,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:99: NotImplementedError
+_________________ test_order_independence_of_relative_quality __________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_order_independence_of_relative_quality(clips):
+>       a = gate.select_best_of_n([str(clips["good"]), str(clips["partial"])])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_bestofn.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+candidates = ['/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good.mp...var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/partial_black.mp4']
+policy = None, expect_duration = None, scorers = None
+
+    def select_best_of_n(
+        candidates: list,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:99: NotImplementedError
+___________________ test_ineligible_high_scorer_still_loses ____________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_ineligible_high_scorer_still_loses(clips):
+        # partial(eligible ~92) vs black(ineligible, low score): partial must win
+>       sel = gate.select_best_of_n([str(clips["black"]), str(clips["partial"])])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_bestofn.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+candidates = ['/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.m...var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/partial_black.mp4']
+policy = None, expect_duration = None, scorers = None
+
+    def select_best_of_n(
+        candidates: list,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:99: NotImplementedError
+__________________ test_expect_duration_gates_every_candidate __________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_expect_duration_gates_every_candidate(clips):
+>       sel = gate.select_best_of_n([str(clips["good"])], expect_duration=30.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_bestofn.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+candidates = ['/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good.mp4']
+policy = None, expect_duration = 30.0, scorers = None
+
+    def select_best_of_n(
+        candidates: list,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:99: NotImplementedError
+___________________ test_selector_reports_policy_and_scores ____________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_selector_reports_policy_and_scores(clips):
+>       sel = gate.select_best_of_n([str(clips["good"])])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_bestofn.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+candidates = ['/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good.mp4']
+policy = None, expect_duration = None, scorers = None
+
+    def select_best_of_n(
+        candidates: list,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:99: NotImplementedError
+____________________ test_black_clip_detected_and_rejected _____________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_black_clip_detected_and_rejected(clips):
+>       rep = gate.evaluate(str(clips["black"]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_checks.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+_________________________ test_good_clip_has_no_black __________________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_good_clip_has_no_black(clips):
+>       rep = gate.evaluate(str(clips["good"]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_checks.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+____________________ test_silent_clip_detected_and_rejected ____________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_silent_clip_detected_and_rejected(clips):
+>       rep = gate.evaluate(str(clips["silent"]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_checks.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/silent.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+__________________________ test_good_clip_not_silent ___________________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_good_clip_not_silent(clips):
+>       rep = gate.evaluate(str(clips["good"]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_checks.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+_____________________ test_loudness_measured_on_good_clip ______________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_loudness_measured_on_good_clip(clips):
+>       rep = gate.evaluate(str(clips["good"]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_checks.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+_____________________ test_loudness_floor_flags_dead_audio _____________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_loudness_floor_flags_dead_audio(clips):
+        # silent clip: mean volume ~ -91 dBFS -> below the -45 dBFS floor
+>       rep = gate.evaluate(str(clips["silent"]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_checks.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/silent.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+_______________________ test_partial_black_is_measurable _______________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_partial_black_is_measurable(clips):
+>       rep = gate.evaluate(str(clips["partial"]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_checks.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/partial_black.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+_______________________________ test_cli_version _______________________________
+
+    def test_cli_version():
+        r = _cli("version")
+>       assert r.returncode == 0
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/Users/vishalnigammacminioffice/.hermes/hermes-agent/venv/bin/python', '/Users/vishalnigammacm...fice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 121, in main\n    raise NotImplementedError\nNotImplementedError\n').returncode
+
+tests/test_cli.py:22: AssertionError
+______________________ test_cli_score_accept_writes_json _______________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+tmp_path = PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_cli_score_accept_writes_j0')
+
+    def test_cli_score_accept_writes_json(clips, tmp_path):
+        out = tmp_path / "report.json"
+        r = _cli("score", "--video", str(clips["good"]), "--json", str(out))
+>       assert r.returncode == 0, r.stderr
+E       AssertionError: Traceback (most recent call last):
+E           File "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 125, in <module>
+E             sys.exit(main())
+E                      ^^^^^^
+E           File "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 121, in main
+E             raise NotImplementedError
+E         NotImplementedError
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/Users/vishalnigammacminioffice/.hermes/hermes-agent/venv/bin/python', '/Users/vishalnigammacm...fice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 121, in main\n    raise NotImplementedError\nNotImplementedError\n').returncode
+
+tests/test_cli.py:29: AssertionError
+______________________ test_cli_score_reject_exit_code_2 _______________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+tmp_path = PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_cli_score_reject_exit_cod0')
+
+    def test_cli_score_reject_exit_code_2(clips, tmp_path):
+        out = tmp_path / "report.json"
+        r = _cli("score", "--video", str(clips["black"]), "--json", str(out))
+>       assert r.returncode == 2, r.stdout + r.stderr
+E       AssertionError: Traceback (most recent call last):
+E           File "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 125, in <module>
+E             sys.exit(main())
+E                      ^^^^^^
+E           File "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 121, in main
+E             raise NotImplementedError
+E         NotImplementedError
+E         
+E       assert 1 == 2
+E        +  where 1 = CompletedProcess(args=['/Users/vishalnigammacminioffice/.hermes/hermes-agent/venv/bin/python', '/Users/vishalnigammacm...fice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 121, in main\n    raise NotImplementedError\nNotImplementedError\n').returncode
+
+tests/test_cli.py:38: AssertionError
+_________________________ test_cli_bestof_picks_winner _________________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+tmp_path = PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_cli_bestof_picks_winner0')
+
+    def test_cli_bestof_picks_winner(clips, tmp_path):
+        out = tmp_path / "sel.json"
+        r = _cli("bestof", "--candidates", f"{clips['black']},{clips['good']}",
+                 "--json", str(out))
+>       assert r.returncode == 0, r.stderr
+E       AssertionError: Traceback (most recent call last):
+E           File "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 125, in <module>
+E             sys.exit(main())
+E                      ^^^^^^
+E           File "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 121, in main
+E             raise NotImplementedError
+E         NotImplementedError
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/Users/vishalnigammacminioffice/.hermes/hermes-agent/venv/bin/python', '/Users/vishalnigammacm...fice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 121, in main\n    raise NotImplementedError\nNotImplementedError\n').returncode
+
+tests/test_cli.py:47: AssertionError
+_______________________ test_cli_bestof_no_winner_exit_2 _______________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+tmp_path = PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_cli_bestof_no_winner_exit0')
+
+    def test_cli_bestof_no_winner_exit_2(clips, tmp_path):
+        r = _cli("bestof", "--candidates", f"{clips['black']},{clips['silent']}")
+>       assert r.returncode == 2
+E       assert 1 == 2
+E        +  where 1 = CompletedProcess(args=['/Users/vishalnigammacminioffice/.hermes/hermes-agent/venv/bin/python', '/Users/vishalnigammacm...fice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 121, in main\n    raise NotImplementedError\nNotImplementedError\n').returncode
+
+tests/test_cli.py:54: AssertionError
+_______________________________ test_cli_record ________________________________
+
+make_db = <function make_db.<locals>._make at 0x10a4ec220>
+tmp_path = PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_cli_record0')
+
+    def test_cli_record(make_db, tmp_path):
+        db = make_db()
+        rep = tmp_path / "r.json"
+        rep.write_text(json.dumps({"verdict": "accept", "score": 88.0,
+                                   "policy_id": "p", "codes": [], "reasons": []}))
+        r = _cli("record", "--db", db, "--job", "job-1", "--report", str(rep))
+>       assert r.returncode == 0, r.stderr
+E       AssertionError: Traceback (most recent call last):
+E           File "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 125, in <module>
+E             sys.exit(main())
+E                      ^^^^^^
+E           File "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 121, in main
+E             raise NotImplementedError
+E         NotImplementedError
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/Users/vishalnigammacminioffice/.hermes/hermes-agent/venv/bin/python', '/Users/vishalnigammacm...fice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 121, in main\n    raise NotImplementedError\nNotImplementedError\n').returncode
+
+tests/test_cli.py:63: AssertionError
+___________________________ test_cli_run_end_to_end ____________________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+make_db = <function make_db.<locals>._make at 0x10a4ec540>
+
+    def test_cli_run_end_to_end(clips, make_db):
+        db = make_db(render_path=str(clips["good"]))
+        r = _cli("run", "--db", db, "--job", "job-1")
+>       assert r.returncode == 0, r.stderr
+E       AssertionError: Traceback (most recent call last):
+E           File "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 125, in <module>
+E             sys.exit(main())
+E                      ^^^^^^
+E           File "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 121, in main
+E             raise NotImplementedError
+E         NotImplementedError
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/Users/vishalnigammacminioffice/.hermes/hermes-agent/venv/bin/python', '/Users/vishalnigammacm...fice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 121, in main\n    raise NotImplementedError\nNotImplementedError\n').returncode
+
+tests/test_cli.py:73: AssertionError
+_______________________ test_cli_selftest_reports_tools ________________________
+
+    def test_cli_selftest_reports_tools():
+        r = _cli("selftest")
+>       assert r.returncode == 0, r.stderr
+E       AssertionError: Traceback (most recent call last):
+E           File "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 125, in <module>
+E             sys.exit(main())
+E                      ^^^^^^
+E           File "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 121, in main
+E             raise NotImplementedError
+E         NotImplementedError
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/Users/vishalnigammacminioffice/.hermes/hermes-agent/venv/bin/python', '/Users/vishalnigammacm...fice/wtf-avatar-factory/wtf/qa-gate/gate.py", line 121, in main\n    raise NotImplementedError\nNotImplementedError\n').returncode
+
+tests/test_cli.py:85: AssertionError
+________________________ test_record_accept_sets_gated _________________________
+
+make_db = <function make_db.<locals>._make at 0x10a4ecae0>
+
+    def test_record_accept_sets_gated(make_db):
+        db = make_db()
+>       res = gate.record_result(db, "job-1", ACCEPT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_db_record.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+db_path = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_record_accept_sets_gated0/factory.db'
+job_id = 'job-1'
+report = {'verdict': 'accept', 'score': 95.5, 'policy_id': 'wtf-qa-gate-v1', 'codes': [], ...}
+init_db = False
+
+    def record_result(db_path: str, job_id: str, report: dict, init_db: bool = False) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:107: NotImplementedError
+_______________________ test_record_reject_sets_rejected _______________________
+
+make_db = <function make_db.<locals>._make at 0x10a496e80>
+
+    def test_record_reject_sets_rejected(make_db):
+        db = make_db()
+>       res = gate.record_result(db, "job-1", REJECT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_db_record.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+db_path = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_record_reject_sets_reject0/factory.db'
+job_id = 'job-1'
+report = {'verdict': 'reject', 'score': 12.0, 'policy_id': 'wtf-qa-gate-v1', 'codes': ['black_ratio_exceeded'], ...}
+init_db = False
+
+    def record_result(db_path: str, job_id: str, report: dict, init_db: bool = False) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:107: NotImplementedError
+_____________________ test_record_unknown_job_fails_closed _____________________
+
+make_db = <function make_db.<locals>._make at 0x10a4eca40>
+
+    def test_record_unknown_job_fails_closed(make_db):
+        db = make_db()
+        with pytest.raises(gate.DbError) as ei:
+>           gate.record_result(db, "ghost", ACCEPT)
+
+tests/test_db_record.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+db_path = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_record_unknown_job_fails_0/factory.db'
+job_id = 'ghost'
+report = {'verdict': 'accept', 'score': 95.5, 'policy_id': 'wtf-qa-gate-v1', 'codes': [], ...}
+init_db = False
+
+    def record_result(db_path: str, job_id: str, report: dict, init_db: bool = False) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:107: NotImplementedError
+____________________ test_record_blocked_state_fails_closed ____________________
+
+make_db = <function make_db.<locals>._make at 0x10a4ec680>
+
+    def test_record_blocked_state_fails_closed(make_db):
+        db = make_db(status="published")
+        with pytest.raises(gate.DbError) as ei:
+>           gate.record_result(db, "job-1", ACCEPT)
+
+tests/test_db_record.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+db_path = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_record_blocked_state_fail0/factory.db'
+job_id = 'job-1'
+report = {'verdict': 'accept', 'score': 95.5, 'policy_id': 'wtf-qa-gate-v1', 'codes': [], ...}
+init_db = False
+
+    def record_result(db_path: str, job_id: str, report: dict, init_db: bool = False) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:107: NotImplementedError
+_______________ test_record_requires_existing_schema_unless_init _______________
+
+tmp_path = PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_record_requires_existing_0')
+
+    def test_record_requires_existing_schema_unless_init(tmp_path):
+        import sqlite3 as s
+    
+        db = str(tmp_path / "empty.db")
+        s.connect(db).close()  # empty file, no tables
+        with pytest.raises(gate.DbError):
+>           gate.record_result(db, "job-1", ACCEPT)  # no init_db -> fail closed
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_db_record.py:71: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+db_path = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_record_requires_existing_0/empty.db'
+job_id = 'job-1'
+report = {'verdict': 'accept', 'score': 95.5, 'policy_id': 'wtf-qa-gate-v1', 'codes': [], ...}
+init_db = False
+
+    def record_result(db_path: str, job_id: str, report: dict, init_db: bool = False) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:107: NotImplementedError
+______________________ test_record_init_db_creates_schema ______________________
+
+tmp_path = PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_record_init_db_creates_sc0')
+
+    def test_record_init_db_creates_schema(tmp_path):
+        db = str(tmp_path / "boot.db")
+        with pytest.raises(gate.DbError) as ei:
+>           gate.record_result(db, "job-1", ACCEPT, init_db=True)  # tables created, job missing
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_db_record.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+db_path = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_record_init_db_creates_sc0/boot.db'
+job_id = 'job-1'
+report = {'verdict': 'accept', 'score': 95.5, 'policy_id': 'wtf-qa-gate-v1', 'codes': [], ...}
+init_db = True
+
+    def record_result(db_path: str, job_id: str, report: dict, init_db: bool = False) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:107: NotImplementedError
+________________________ test_regate_allowed_from_gated ________________________
+
+make_db = <function make_db.<locals>._make at 0x10a4ec0e0>
+
+    def test_regate_allowed_from_gated(make_db):
+        db = make_db(status="gated")
+>       res = gate.record_result(db, "job-1", REJECT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_db_record.py:88: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+db_path = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_regate_allowed_from_gated0/factory.db'
+job_id = 'job-1'
+report = {'verdict': 'reject', 'score': 12.0, 'policy_id': 'wtf-qa-gate-v1', 'codes': ['black_ratio_exceeded'], ...}
+init_db = False
+
+    def record_result(db_path: str, job_id: str, report: dict, init_db: bool = False) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:107: NotImplementedError
+___________________________ test_gate_job_end_to_end ___________________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+make_db = <function make_db.<locals>._make at 0x10a4ec220>
+
+    def test_gate_job_end_to_end(clips, make_db):
+        db = make_db(render_path=str(clips["good"]))
+>       res = gate.gate_job(db, "job-1")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_db_record.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+db_path = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_gate_job_end_to_end0/factory.db'
+job_id = 'job-1', policy = None, expect_duration = None, init_db = False
+
+    def gate_job(
+        db_path: str,
+        job_id: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        init_db: bool = False,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:117: NotImplementedError
+________________ test_gate_job_missing_render_path_fails_closed ________________
+
+make_db = <function make_db.<locals>._make at 0x10a4ecd60>
+
+    def test_gate_job_missing_render_path_fails_closed(make_db):
+        db = make_db(render_path=None)
+        with pytest.raises(gate.DbError):
+>           gate.gate_job(db, "job-1")
+
+tests/test_db_record.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+db_path = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_gate_job_missing_render_p0/factory.db'
+job_id = 'job-1', policy = None, expect_duration = None, init_db = False
+
+    def gate_job(
+        db_path: str,
+        job_id: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        init_db: bool = False,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:117: NotImplementedError
+___________________________ test_good_clip_probe_ok ____________________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_good_clip_probe_ok(clips):
+>       rep = gate.evaluate(str(clips["good"]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_integrity.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+__________________________ test_corrupt_file_rejected __________________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_corrupt_file_rejected(clips):
+>       rep = gate.evaluate(str(clips["corrupt"]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_integrity.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/corrupt.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+__________________________ test_missing_file_rejected __________________________
+
+tmp_path = PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_missing_file_rejected0')
+
+    def test_missing_file_rejected(tmp_path):
+>       rep = gate.evaluate(str(tmp_path / "nope.mp4"))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_integrity.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_missing_file_rejected0/nope.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+________________________ test_no_audio_stream_rejected _________________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_no_audio_stream_rejected(clips):
+>       rep = gate.evaluate(str(clips["noaudio"]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_integrity.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/noaudio.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+__________________ test_no_audio_allowed_when_policy_permits ___________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+write_policy = <function write_policy.<locals>._write at 0x10a4ed080>
+
+    def test_no_audio_allowed_when_policy_permits(clips, write_policy):
+>       pol = gate.Policy.load(write_policy(thresholds={"require_audio": False}))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_integrity.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'gate.Policy'>
+path = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_no_audio_allowed_when_pol0/policy_override.yaml'
+
+    @classmethod
+    def load(cls, path: Optional[str] = None) -> "Policy":
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:57: NotImplementedError
+___________________________ test_short_clip_rejected ___________________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_short_clip_rejected(clips):
+>       rep = gate.evaluate(str(clips["short"]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_integrity.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/short.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+___________________ test_expected_duration_mismatch_rejected ___________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_expected_duration_mismatch_rejected(clips):
+>       rep = gate.evaluate(str(clips["good"]), expect_duration=10.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_integrity.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good.mp4'
+policy = None, expect_duration = 10.0, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+_______________ test_expected_duration_within_tolerance_accepts ________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_expected_duration_within_tolerance_accepts(clips):
+>       rep = gate.evaluate(str(clips["good"]), expect_duration=3.1)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_integrity.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good.mp4'
+policy = None, expect_duration = 3.1, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+_______________________ test_duration_above_max_rejected _______________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+write_policy = <function write_policy.<locals>._write at 0x10ac5b060>
+
+    def test_duration_above_max_rejected(clips, write_policy):
+>       pol = gate.Policy.load(write_policy(thresholds={"max_duration_s": 2.0}))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_integrity.py:73: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'gate.Policy'>
+path = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_duration_above_max_reject0/policy_override.yaml'
+
+    @classmethod
+    def load(cls, path: Optional[str] = None) -> "Policy":
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:57: NotImplementedError
+_____________________ test_video_sha256_present_and_stable _____________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_video_sha256_present_and_stable(clips):
+>       a = gate.evaluate(str(clips["good"]))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_integrity.py:80: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+__________________________ test_default_policy_loads ___________________________
+
+    def test_default_policy_loads():
+>       pol = gate.Policy.load()
+              ^^^^^^^^^^^^^^^^^^
+
+tests/test_policy.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'gate.Policy'>, path = None
+
+    @classmethod
+    def load(cls, path: Optional[str] = None) -> "Policy":
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:57: NotImplementedError
+__________________ test_policy_explicit_path_matches_default ___________________
+
+tmp_path = PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_policy_explicit_path_matc0')
+
+    def test_policy_explicit_path_matches_default(tmp_path):
+        src = Path(gate.DEFAULT_POLICY_PATH)
+        dst = tmp_path / "copy.yaml"
+        dst.write_text(src.read_text())
+>       a = gate.Policy.load()
+            ^^^^^^^^^^^^^^^^^^
+
+tests/test_policy.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'gate.Policy'>, path = None
+
+    @classmethod
+    def load(cls, path: Optional[str] = None) -> "Policy":
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:57: NotImplementedError
+____________________ test_policy_missing_file_fails_closed _____________________
+
+tmp_path = PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_policy_missing_file_fails0')
+
+    def test_policy_missing_file_fails_closed(tmp_path):
+        with pytest.raises(gate.PolicyError):
+>           gate.Policy.load(str(tmp_path / "nope.yaml"))
+
+tests/test_policy.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'gate.Policy'>
+path = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_policy_missing_file_fails0/nope.yaml'
+
+    @classmethod
+    def load(cls, path: Optional[str] = None) -> "Policy":
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:57: NotImplementedError
+____________________ test_policy_invalid_yaml_fails_closed _____________________
+
+tmp_path = PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_policy_invalid_yaml_fails0')
+
+    def test_policy_invalid_yaml_fails_closed(tmp_path):
+        bad = tmp_path / "bad.yaml"
+        bad.write_text("::: not : yaml : [\n")
+        with pytest.raises(gate.PolicyError):
+>           gate.Policy.load(str(bad))
+
+tests/test_policy.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'gate.Policy'>
+path = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_policy_invalid_yaml_fails0/bad.yaml'
+
+    @classmethod
+    def load(cls, path: Optional[str] = None) -> "Policy":
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:57: NotImplementedError
+________________ test_policy_missing_required_key_fails_closed _________________
+
+tmp_path = PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_policy_missing_required_k0')
+
+    def test_policy_missing_required_key_fails_closed(tmp_path):
+        import yaml
+    
+        data = yaml.safe_load(Path(gate.DEFAULT_POLICY_PATH).read_text())
+        del data["thresholds"]["accept_score"]
+        p = tmp_path / "incomplete.yaml"
+        p.write_text(yaml.safe_dump(data, sort_keys=False))
+        with pytest.raises(gate.PolicyError):
+>           gate.Policy.load(str(p))
+
+tests/test_policy.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'gate.Policy'>
+path = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_policy_missing_required_k0/incomplete.yaml'
+
+    @classmethod
+    def load(cls, path: Optional[str] = None) -> "Policy":
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:57: NotImplementedError
+______________________ test_policy_bad_type_fails_closed _______________________
+
+tmp_path = PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_policy_bad_type_fails_clo0')
+
+    def test_policy_bad_type_fails_closed(tmp_path):
+        import yaml
+    
+        data = yaml.safe_load(Path(gate.DEFAULT_POLICY_PATH).read_text())
+        data["thresholds"]["max_black_ratio"] = "not-a-number"
+        p = tmp_path / "badtype.yaml"
+        p.write_text(yaml.safe_dump(data, sort_keys=False))
+        with pytest.raises(gate.PolicyError):
+>           gate.Policy.load(str(p))
+
+tests/test_policy.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'gate.Policy'>
+path = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_policy_bad_type_fails_clo0/badtype.yaml'
+
+    @classmethod
+    def load(cls, path: Optional[str] = None) -> "Policy":
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:57: NotImplementedError
+_________________________ test_score_from_ratio_bounds _________________________
+
+    def test_score_from_ratio_bounds():
+>       assert gate.score_from_ratio(0.0, 0.4) == 1.0
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_scoring.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ratio = 0.0, max_ratio = 0.4
+
+    def score_from_ratio(ratio: float, max_ratio: float) -> float:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:65: NotImplementedError
+____________________ test_good_clip_scores_100_and_accepts _____________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_good_clip_scores_100_and_accepts(clips):
+>       rep = gate.evaluate(str(clips["good"]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_scoring.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+____________________ test_accept_threshold_boundary_rejects ____________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+write_policy = <function write_policy.<locals>._write at 0x10ac5ade0>
+
+    def test_accept_threshold_boundary_rejects(clips, write_policy):
+>       pol = gate.Policy.load(write_policy(thresholds={"accept_score": 100.5}))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_scoring.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'gate.Policy'>
+path = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_accept_threshold_boundary0/policy_override.yaml'
+
+    @classmethod
+    def load(cls, path: Optional[str] = None) -> "Policy":
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:57: NotImplementedError
+_________________ test_score_basis_renormalizes_over_available _________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_score_basis_renormalizes_over_available(clips):
+>       rep = gate.evaluate(str(clips["good"]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_scoring.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+__________________________ test_report_required_keys ___________________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_report_required_keys(clips):
+>       rep = gate.evaluate(str(clips["good"]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_scoring.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+______________________ test_partial_black_scores_between _______________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_partial_black_scores_between(clips):
+>       rep = gate.evaluate(str(clips["partial"]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_scoring.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/partial_black.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+_________ test_evaluate_does_not_mutate_input_and_is_json_serializable _________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_evaluate_does_not_mutate_input_and_is_json_serializable(clips):
+        import json
+    
+>       rep = gate.evaluate(str(clips["good"]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_scoring.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+____________ test_lipsync_stub_is_unavailable_and_never_fabricates _____________
+
+    def test_lipsync_stub_is_unavailable_and_never_fabricates():
+>       s = gate.LipSyncWERScorer()
+            ^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_stubs.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <gate.LipSyncWERScorer object at 0x10a5de9d0>, mode = 'stub'
+
+    def __init__(self, mode: str = "stub") -> None:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:70: NotImplementedError
+_____________________ test_lipsync_live_mode_refused_dark ______________________
+
+    def test_lipsync_live_mode_refused_dark():
+        with pytest.raises(gate.LiveScoringDisabled):
+>           gate.LipSyncWERScorer(mode="live")
+
+tests/test_stubs.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <gate.LipSyncWERScorer object at 0x10ac77a50>, mode = 'live'
+
+    def __init__(self, mode: str = "stub") -> None:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:70: NotImplementedError
+_______________________ test_facesim_stub_is_unavailable _______________________
+
+    def test_facesim_stub_is_unavailable():
+>       s = gate.FaceSimScorer()
+            ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_stubs.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <gate.FaceSimScorer object at 0x10a50d650>, mode = 'stub'
+
+    def __init__(self, mode: str = "stub") -> None:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:78: NotImplementedError
+_____________________ test_facesim_live_mode_refused_dark ______________________
+
+    def test_facesim_live_mode_refused_dark():
+        with pytest.raises(gate.LiveScoringDisabled):
+>           gate.FaceSimScorer(mode="live")
+
+tests/test_stubs.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <gate.FaceSimScorer object at 0x10ac70b10>, mode = 'live'
+
+    def __init__(self, mode: str = "stub") -> None:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:78: NotImplementedError
+________________ test_gate_report_marks_stub_checks_unavailable ________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+
+    def test_gate_report_marks_stub_checks_unavailable(clips):
+>       rep = gate.evaluate(str(clips["good"]))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_stubs.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+video = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/good.mp4'
+policy = None, expect_duration = None, scorers = None
+
+    def evaluate(
+        video: str,
+        policy: Optional[Policy] = None,
+        expect_duration: Optional[float] = None,
+        scorers: Optional[dict] = None,
+    ) -> dict:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:90: NotImplementedError
+____________________ test_required_stub_check_would_reject _____________________
+
+clips = {'dir': PosixPath('/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-...e/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/clips0/black.mp4'), ...}
+write_policy = <function write_policy.<locals>._write at 0x10acac540>
+
+    def test_required_stub_check_would_reject(clips, write_policy):
+>       pol = gate.Policy.load(write_policy(checks={"lip_sync_wer": {"required": True}}))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_stubs.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'gate.Policy'>
+path = '/private/var/folders/g7/30kx01kx6_vc9qnxjqp_36qh0000gq/T/pytest-of-vishalnigammacminioffice/pytest-23/test_required_stub_check_would0/policy_override.yaml'
+
+    @classmethod
+    def load(cls, path: Optional[str] = None) -> "Policy":
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:57: NotImplementedError
+_____________________________ test_wer_math_exact ______________________________
+
+    def test_wer_math_exact():
+>       assert gate.word_error_rate("the quick brown fox", "the quick brown fox") == 0.0
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_stubs.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ref = 'the quick brown fox', hyp = 'the quick brown fox'
+
+    def word_error_rate(ref: str, hyp: str) -> float:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:61: NotImplementedError
+____________________________ test_wer_unicode_hindi ____________________________
+
+    def test_wer_unicode_hindi():
+        ref = "नमस्ते दोस्तों आज हम बात करेंगे"
+>       assert gate.word_error_rate(ref, ref) == 0.0
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_stubs.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ref = 'नमस्ते दोस्तों आज हम बात करेंगे', hyp = 'नमस्ते दोस्तों आज हम बात करेंगे'
+
+    def word_error_rate(ref: str, hyp: str) -> float:
+>       raise NotImplementedError
+E       NotImplementedError
+
+gate.py:61: NotImplementedError
+=========================== short test summary info ============================
+FAILED tests/test_bestofn.py::test_winner_is_not_the_first_candidate - NotImp...
+FAILED tests/test_bestofn.py::test_all_ineligible_yields_no_winner - NotImple...
+FAILED tests/test_bestofn.py::test_tie_breaks_to_earliest_index - NotImplemen...
+FAILED tests/test_bestofn.py::test_order_independence_of_relative_quality - N...
+FAILED tests/test_bestofn.py::test_ineligible_high_scorer_still_loses - NotIm...
+FAILED tests/test_bestofn.py::test_expect_duration_gates_every_candidate - No...
+FAILED tests/test_bestofn.py::test_selector_reports_policy_and_scores - NotIm...
+FAILED tests/test_checks.py::test_black_clip_detected_and_rejected - NotImple...
+FAILED tests/test_checks.py::test_good_clip_has_no_black - NotImplementedError
+FAILED tests/test_checks.py::test_silent_clip_detected_and_rejected - NotImpl...
+FAILED tests/test_checks.py::test_good_clip_not_silent - NotImplementedError
+FAILED tests/test_checks.py::test_loudness_measured_on_good_clip - NotImpleme...
+FAILED tests/test_checks.py::test_loudness_floor_flags_dead_audio - NotImplem...
+FAILED tests/test_checks.py::test_partial_black_is_measurable - NotImplemente...
+FAILED tests/test_cli.py::test_cli_version - assert 1 == 0
+FAILED tests/test_cli.py::test_cli_score_accept_writes_json - AssertionError:...
+FAILED tests/test_cli.py::test_cli_score_reject_exit_code_2 - AssertionError:...
+FAILED tests/test_cli.py::test_cli_bestof_picks_winner - AssertionError: Trac...
+FAILED tests/test_cli.py::test_cli_bestof_no_winner_exit_2 - assert 1 == 2
+FAILED tests/test_cli.py::test_cli_record - AssertionError: Traceback (most r...
+FAILED tests/test_cli.py::test_cli_run_end_to_end - AssertionError: Traceback...
+FAILED tests/test_cli.py::test_cli_selftest_reports_tools - AssertionError: T...
+FAILED tests/test_db_record.py::test_record_accept_sets_gated - NotImplemente...
+FAILED tests/test_db_record.py::test_record_reject_sets_rejected - NotImpleme...
+FAILED tests/test_db_record.py::test_record_unknown_job_fails_closed - NotImp...
+FAILED tests/test_db_record.py::test_record_blocked_state_fails_closed - NotI...
+FAILED tests/test_db_record.py::test_record_requires_existing_schema_unless_init
+FAILED tests/test_db_record.py::test_record_init_db_creates_schema - NotImple...
+FAILED tests/test_db_record.py::test_regate_allowed_from_gated - NotImplement...
+FAILED tests/test_db_record.py::test_gate_job_end_to_end - NotImplementedError
+FAILED tests/test_db_record.py::test_gate_job_missing_render_path_fails_closed
+FAILED tests/test_integrity.py::test_good_clip_probe_ok - NotImplementedError
+FAILED tests/test_integrity.py::test_corrupt_file_rejected - NotImplementedError
+FAILED tests/test_integrity.py::test_missing_file_rejected - NotImplementedError
+FAILED tests/test_integrity.py::test_no_audio_stream_rejected - NotImplemente...
+FAILED tests/test_integrity.py::test_no_audio_allowed_when_policy_permits - N...
+FAILED tests/test_integrity.py::test_short_clip_rejected - NotImplementedError
+FAILED tests/test_integrity.py::test_expected_duration_mismatch_rejected - No...
+FAILED tests/test_integrity.py::test_expected_duration_within_tolerance_accepts
+FAILED tests/test_integrity.py::test_duration_above_max_rejected - NotImpleme...
+FAILED tests/test_integrity.py::test_video_sha256_present_and_stable - NotImp...
+FAILED tests/test_policy.py::test_default_policy_loads - NotImplementedError
+FAILED tests/test_policy.py::test_policy_explicit_path_matches_default - NotI...
+FAILED tests/test_policy.py::test_policy_missing_file_fails_closed - NotImple...
+FAILED tests/test_policy.py::test_policy_invalid_yaml_fails_closed - NotImple...
+FAILED tests/test_policy.py::test_policy_missing_required_key_fails_closed - ...
+FAILED tests/test_policy.py::test_policy_bad_type_fails_closed - NotImplement...
+FAILED tests/test_scoring.py::test_score_from_ratio_bounds - NotImplementedError
+FAILED tests/test_scoring.py::test_good_clip_scores_100_and_accepts - NotImpl...
+FAILED tests/test_scoring.py::test_accept_threshold_boundary_rejects - NotImp...
+FAILED tests/test_scoring.py::test_score_basis_renormalizes_over_available - ...
+FAILED tests/test_scoring.py::test_report_required_keys - NotImplementedError
+FAILED tests/test_scoring.py::test_partial_black_scores_between - NotImplemen...
+FAILED tests/test_scoring.py::test_evaluate_does_not_mutate_input_and_is_json_serializable
+FAILED tests/test_stubs.py::test_lipsync_stub_is_unavailable_and_never_fabricates
+FAILED tests/test_stubs.py::test_lipsync_live_mode_refused_dark - NotImplemen...
+FAILED tests/test_stubs.py::test_facesim_stub_is_unavailable - NotImplemented...
+FAILED tests/test_stubs.py::test_facesim_live_mode_refused_dark - NotImplemen...
+FAILED tests/test_stubs.py::test_gate_report_marks_stub_checks_unavailable - ...
+FAILED tests/test_stubs.py::test_required_stub_check_would_reject - NotImplem...
+FAILED tests/test_stubs.py::test_wer_math_exact - NotImplementedError
+FAILED tests/test_stubs.py::test_wer_unicode_hindi - NotImplementedError

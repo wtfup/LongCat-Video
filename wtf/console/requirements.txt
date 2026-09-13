@@ -1,0 +1,9 @@
+# W2 Console — dependencies pinned to the versions this package was verified
+# against (python 3.11.14, macOS). Install into a venv:
+#   python -m pip install -r requirements.txt
+# Run the tests:
+#   python -m pytest
+fastapi==0.133.1
+uvicorn==0.41.0
+httpx==0.28.1      # required by fastapi.testclient
+pytest==9.1.1

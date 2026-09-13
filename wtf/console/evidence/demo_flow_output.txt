@@ -1,0 +1,24 @@
+== W2 console — end-to-end evidence ==
+demo db    : /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/console/evidence/demo/factory-demo.db
+media root : /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/console/evidence/demo/renders
+
+[PASS] 1 health ok  (status=ok jobs_total=0)
+[PASS] 2 queue job (hi)  (job_20260913_113619_532e19)
+[PASS] 2 queue job (en)  (job_20260913_113619_a490d3)
+[PASS] 4 gated queue lists both  (count=2)
+[PASS] 4 detail: render available  (/jobs/job_20260913_113619_532e19/render)
+[PASS] 4 detail: gate receipt visible
+[PASS] 4 detail: audit events visible
+[PASS] 5 approve job 1  ({"ok": true, "id": "job_20260913_113619_532e19", "status": "approved", "changed": true})
+[PASS] 5 reject job 2 with reason  ({"ok": true, "id": "job_20260913_113619_a490d3", "status": "rejected", "changed": true})
+[PASS] 6 db: job 1 status=approved  (approved)
+[PASS] 6 db: job 2 status=rejected  (rejected)
+[PASS] 6 db: reject reason persisted to notes
+[PASS] 6 db: status_change event with from/to/by
+[PASS] 7 idempotent approve replay
+[PASS] 7 invalid transition blocked (409 queued->approved)  ({"error": "invalid_transition", "current": "queued", "allowed_from": ["gated"]})
+[PASS] 8 render served (video/mp4)  (4108 bytes)
+[PASS] 8 traversal outside media root refused (403)
+[PASS] 9 zero network calls (all sockets blocked)
+
+FAILURES: 0

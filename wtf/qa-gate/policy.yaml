@@ -1,0 +1,43 @@
+# WTF QA Gate — policy v1
+# Owned by W7 (wtf/qa-gate). Thresholds + weights for the avatar render gate.
+# Everything here is local: the gate runs ffprobe/ffmpeg only; no network.
+version: 1
+policy_id: wtf-qa-gate-v1
+
+thresholds:
+  # hard bounds on duration
+  min_duration_s: 1.0
+  max_duration_s: 600.0
+  # |actual - expected| tolerance when the caller supplies --expect-duration
+  duration_tolerance_s: 1.0
+  # fraction of the clip allowed to be detected black
+  max_black_ratio: 0.40
+  # fraction of the clip allowed to be detected silent
+  max_silence_ratio: 0.35
+  # mean volume floor (dBFS) — below this the audio track is treated as effectively dead
+  min_mean_volume_dbfs: -45.0
+  # avatar videos must carry an audio stream
+  require_audio: true
+  # weighted score (0-100) required to accept, given no required-check failure
+  accept_score: 70.0
+
+checks:
+  integrity:    {required: true,  weight: 0.0}
+  black_frames: {required: true,  weight: 1.0}
+  silence:      {required: true,  weight: 1.0}
+  loudness:     {required: false, weight: 0.5}
+  lip_sync_wer: {required: false, weight: 3.0, mode: stub}
+  face_sim:     {required: false, weight: 3.0, mode: stub}
+
+detectors:
+  blackdetect:
+    min_black_duration_s: 0.05
+    pixel_threshold: 0.10
+    picture_black_ratio: 0.98
+  silencedetect:
+    noise_floor_db: -35.0
+    min_silence_duration_s: 0.5
+  decode_scan:
+    # 0 = scan the full clip for decode errors
+    max_seconds: 0
+    timeout_s: 180

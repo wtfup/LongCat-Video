@@ -1,0 +1,217 @@
+{
+  "version": "1.0",
+  "generated_by": "w4-content-brain",
+  "start_date": "2026-09-14",
+  "briefs": [
+    {
+      "order": 1,
+      "file": "brief_01_ai_systems-01.md",
+      "brief_id": "cb-2026-09-14-ai_systems-01",
+      "date": "2026-09-14",
+      "pillar": "ai_systems",
+      "brand": "wtf_gyms",
+      "topic_id": "ai_systems-01",
+      "title_en": "The AI receptionist that never sleeps",
+      "title_hi": "AI receptionist जो कभी नहीं सोता",
+      "languages": [
+        "en",
+        "hi"
+      ],
+      "word_counts": {
+        "en": 87,
+        "hi": 101
+      },
+      "hashtag_count": 12,
+      "sha256": "226ea74c08bd718cfb1a6c263c160c5bd30ab7ddf1b7143106e70ed3292872fd"
+    },
+    {
+      "order": 2,
+      "file": "brief_02_ai_systems-02.md",
+      "brief_id": "cb-2026-09-15-ai_systems-02",
+      "date": "2026-09-15",
+      "pillar": "ai_systems",
+      "brand": "wtf_gyms",
+      "topic_id": "ai_systems-02",
+      "title_en": "Your next employee won't be human",
+      "title_hi": "आपका अगला employee इंसान नहीं होगा",
+      "languages": [
+        "en",
+        "hi"
+      ],
+      "word_counts": {
+        "en": 79,
+        "hi": 81
+      },
+      "hashtag_count": 12,
+      "sha256": "e48bade4a67a7a985717cb5424124f480d995ef1451714ab059100549f869130"
+    },
+    {
+      "order": 3,
+      "file": "brief_03_founder_journey-01.md",
+      "brief_id": "cb-2026-09-16-founder_journey-01",
+      "date": "2026-09-16",
+      "pillar": "founder_journey",
+      "brand": "wtf_gyms",
+      "topic_id": "founder_journey-01",
+      "title_en": "The boring middle of building something big",
+      "title_hi": "कुछ बड़ा बनाने का boring middle",
+      "languages": [
+        "en",
+        "hi"
+      ],
+      "word_counts": {
+        "en": 86,
+        "hi": 96
+      },
+      "hashtag_count": 12,
+      "sha256": "d68a6b5a139817f3b79f08d4197b687dc90e1d1f50e64494dc4c55fbd75d8116"
+    },
+    {
+      "order": 4,
+      "file": "brief_04_founder_journey-02.md",
+      "brief_id": "cb-2026-09-17-founder_journey-02",
+      "date": "2026-09-17",
+      "pillar": "founder_journey",
+      "brand": "wtf_gyms",
+      "topic_id": "founder_journey-02",
+      "title_en": "Hire slow, fire fast — the expensive lesson",
+      "title_hi": "Hire slow, fire fast — यह सबक महँगा पड़ा",
+      "languages": [
+        "en",
+        "hi"
+      ],
+      "word_counts": {
+        "en": 88,
+        "hi": 86
+      },
+      "hashtag_count": 12,
+      "sha256": "5d962debb9058ffcfbf0741208cfbdbb7a62ae591c34bf5f874f384a9318278c"
+    },
+    {
+      "order": 5,
+      "file": "brief_05_wtf_brands-01.md",
+      "brief_id": "cb-2026-09-18-wtf_brands-01",
+      "date": "2026-09-18",
+      "pillar": "wtf_brands",
+      "brand": "wtf_academy",
+      "topic_id": "wtf_brands-01",
+      "title_en": "WTF Academy: building India's next generation of trainers",
+      "title_hi": "WTF Academy: India के अगले trainers तैयार कर रहे हैं",
+      "languages": [
+        "en",
+        "hi"
+      ],
+      "word_counts": {
+        "en": 77,
+        "hi": 80
+      },
+      "hashtag_count": 12,
+      "sha256": "54597e37a14cd0c75d4fd7899e42e12c09d4fa5e742ddbfb56245b2bbc763088"
+    },
+    {
+      "order": 6,
+      "file": "brief_06_wtf_brands-02.md",
+      "brief_id": "cb-2026-09-19-wtf_brands-02",
+      "date": "2026-09-19",
+      "pillar": "wtf_brands",
+      "brand": "everyday",
+      "topic_id": "wtf_brands-02",
+      "title_en": "EVRYDAY: fitness essentials without the markup",
+      "title_hi": "EVRYDAY: बिना भारी दाम वाली fitness essentials",
+      "languages": [
+        "en",
+        "hi"
+      ],
+      "word_counts": {
+        "en": 70,
+        "hi": 76
+      },
+      "hashtag_count": 12,
+      "sha256": "8a5bee2525b802e88b812bae6d92f11fd8d4ab70e838d796bd6028ab13d13450"
+    },
+    {
+      "order": 7,
+      "file": "brief_07_fitness_transformation-01.md",
+      "brief_id": "cb-2026-09-20-fitness_transformation-01",
+      "date": "2026-09-20",
+      "pillar": "fitness_transformation",
+      "brand": "wtf_gyms",
+      "topic_id": "fitness_transformation-01",
+      "title_en": "A transformation is a system — not a miracle",
+      "title_hi": "Transformation एक system है — चमत्कार नहीं",
+      "languages": [
+        "en",
+        "hi"
+      ],
+      "word_counts": {
+        "en": 78,
+        "hi": 84
+      },
+      "hashtag_count": 12,
+      "sha256": "33154a0b4ff814f4c1c860bf79f2a051a6d4f8e149f3e1ea5557f4e8fd730c91"
+    },
+    {
+      "order": 8,
+      "file": "brief_08_fitness_transformation-02.md",
+      "brief_id": "cb-2026-09-21-fitness_transformation-02",
+      "date": "2026-09-21",
+      "pillar": "fitness_transformation",
+      "brand": "wtf_gyms",
+      "topic_id": "fitness_transformation-02",
+      "title_en": "20 minutes beats zero — consistency wins",
+      "title_hi": "20 मिनट > शून्य — consistency जीतती है",
+      "languages": [
+        "en",
+        "hi"
+      ],
+      "word_counts": {
+        "en": 73,
+        "hi": 90
+      },
+      "hashtag_count": 12,
+      "sha256": "e52f34d3295311b297b21657f7c15b25630149f8ae2a50d2095036b264e33396"
+    },
+    {
+      "order": 9,
+      "file": "brief_09_business-01.md",
+      "brief_id": "cb-2026-09-22-business-01",
+      "date": "2026-09-22",
+      "pillar": "business",
+      "brand": "wtf_gyms",
+      "topic_id": "business-01",
+      "title_en": "Unit economics: the one number that decides everything",
+      "title_hi": "Unit economics: वह एक number जो सब तय करता है",
+      "languages": [
+        "en",
+        "hi"
+      ],
+      "word_counts": {
+        "en": 81,
+        "hi": 78
+      },
+      "hashtag_count": 12,
+      "sha256": "9853758329b241dc7457975eb826b4b60c7f3cc61d3387ac16fe09dfaebbb532"
+    },
+    {
+      "order": 10,
+      "file": "brief_10_business-02.md",
+      "brief_id": "cb-2026-09-23-business-02",
+      "date": "2026-09-23",
+      "pillar": "business",
+      "brand": "wtf_gyms",
+      "topic_id": "business-02",
+      "title_en": "Culture is a system — incentives decide behavior",
+      "title_hi": "Culture एक system है — incentives behaviour तय करते हैं",
+      "languages": [
+        "en",
+        "hi"
+      ],
+      "word_counts": {
+        "en": 68,
+        "hi": 74
+      },
+      "hashtag_count": 12,
+      "sha256": "5614a5e6ba8d81029e00384e526d94d2c1bd325a4a04dacd065ca2de7009243e"
+    }
+  ]
+}

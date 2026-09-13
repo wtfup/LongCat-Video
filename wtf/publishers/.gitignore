@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+# Runtime unlock files live on the deploy box only, never in git.
+# The shipped example stays tracked.
+approvals/*.json
+!approvals/example.approval.json

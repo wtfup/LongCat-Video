@@ -1,0 +1,90 @@
+{
+  "facebook": {
+    "rc": 0,
+    "receipt": {
+      "accepted": false,
+      "channel": "facebook",
+      "created_at": "2026-09-13T11:46:08+00:00",
+      "dry_run": true,
+      "endpoint": "https://graph.facebook.com/v21.0/${FB_PAGE_ID}/videos",
+      "gate_reason": "env_unlock_missing+approval_missing",
+      "http_method": "POST",
+      "job_id": "job-0001",
+      "notes": [
+        "dry-run: zero network calls; no provider request was made",
+        "steps planned: 1"
+      ],
+      "payload_digest": "7aaad28b9abccc86181b65acfa22c72443fc99e39fd5533925d88aa955764b01",
+      "provider_post_id": "dry-run-7aaad28b9abc",
+      "steps_executed": 0,
+      "steps_planned": 1,
+      "transport": "dry-run"
+    }
+  },
+  "instagram": {
+    "rc": 0,
+    "receipt": {
+      "accepted": false,
+      "channel": "instagram",
+      "created_at": "2026-09-13T11:46:08+00:00",
+      "dry_run": true,
+      "endpoint": "https://graph.facebook.com/v21.0/${IG_USER_ID}/media_publish",
+      "gate_reason": "env_unlock_missing+approval_missing",
+      "http_method": "POST",
+      "job_id": "job-0001",
+      "notes": [
+        "dry-run: zero network calls; no provider request was made",
+        "steps planned: 3"
+      ],
+      "payload_digest": "3d131876f73d06f5ab50487759f1fb28231b59b597d3162ca612fb8c857708cb",
+      "provider_post_id": "dry-run-3d131876f73d",
+      "steps_executed": 0,
+      "steps_planned": 3,
+      "transport": "dry-run"
+    }
+  },
+  "x": {
+    "rc": 0,
+    "receipt": {
+      "accepted": false,
+      "channel": "x",
+      "created_at": "2026-09-13T11:46:08+00:00",
+      "dry_run": true,
+      "endpoint": "https://api.x.com/2/tweets",
+      "gate_reason": "env_unlock_missing+approval_missing",
+      "http_method": "POST",
+      "job_id": "job-0001",
+      "notes": [
+        "dry-run: zero network calls; no provider request was made",
+        "steps planned: 4"
+      ],
+      "payload_digest": "70c14924e956edd603bc03d7f54e9b0e2bb03b71bdeaf32f734f9bf8b66a7efc",
+      "provider_post_id": "dry-run-70c14924e956",
+      "steps_executed": 0,
+      "steps_planned": 4,
+      "transport": "dry-run"
+    }
+  },
+  "youtube": {
+    "rc": 0,
+    "receipt": {
+      "accepted": false,
+      "channel": "youtube",
+      "created_at": "2026-09-13T11:46:08+00:00",
+      "dry_run": true,
+      "endpoint": "${upload_url}",
+      "gate_reason": "env_unlock_missing+approval_missing",
+      "http_method": "PUT",
+      "job_id": "job-0001",
+      "notes": [
+        "dry-run: zero network calls; no provider request was made",
+        "steps planned: 2"
+      ],
+      "payload_digest": "27b07270e40ec1362fa4281ef161e1d99c058452f071d0555e8b6673b5ce5dba",
+      "provider_post_id": "dry-run-27b07270e40e",
+      "steps_executed": 0,
+      "steps_planned": 2,
+      "transport": "dry-run"
+    }
+  }
+}

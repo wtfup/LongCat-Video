@@ -1,0 +1,112 @@
+$ python brain.py --date 2026-09-14 --pillar ai_systems --topic ai_systems-01
+===============================================================
+# Daily Brief — 2026-09-14 — AI Systems
+
+**Brief ID:** cb-2026-09-14-ai_systems-01
+**Brand:** WTF Gyms (`wtf_gyms`)
+**Topic:** The AI receptionist that never sleeps
+**Topic (HI):** AI receptionist जो कभी नहीं सोता
+**Format:** 9:16_vertical_reel · **Duration:** 45s · **Languages:** Hindi + English
+
+## Hook (first 3 seconds)
+- **EN:** Nobody's telling you this about the AI receptionist that never sleeps —
+- **HI:** AI receptionist जो कभी नहीं सोता — यह बात कोई नहीं बताता।
+
+## 45s Script — English
+**English** — ~87 words ≈ 45s at natural pace
+
+[0:00–0:03] HOOK
+  VO: "Nobody's telling you this about the AI receptionist that never sleeps —"
+  ON-SCREEN: REPLIES IN 60 SEC
+
+[0:03–0:11] CONTEXT
+  VO: "Here's the difference between AI in a demo and AI in a real business —"
+  ON-SCREEN: WTF GYMS
+
+[0:11–0:19] POINT 1
+  VO: "A lead goes cold in minutes. Most gyms reply in hours."
+  ON-SCREEN: A LEAD GOES COLD IN
+
+[0:19–0:27] POINT 2
+  VO: "Our AI answers every enquiry under 60 seconds — 24×7, Hindi or English."
+  ON-SCREEN: OUR AI ANSWERS EVERY ENQUIRY
+
+[0:27–0:35] POINT 3
+  VO: "AI qualifies and books. Trainers close. That split is the system."
+  ON-SCREEN: AI QUALIFIES AND BOOKS. TRAINERS
+
+[0:35–0:40] PROOF
+  VO: "We run this AI across our own gyms first — only then do we talk about it."
+  ON-SCREEN: PROOF
+
+[0:40–0:45] CTA
+  VO: "Follow for the real playbooks behind AI-run businesses."
+  ON-SCREEN: FOLLOW
+
+## 45s Script — Hindi
+**Hindi** — ~101 words ≈ 45s at natural pace
+
+[0:00–0:03] HOOK
+  VO: "AI receptionist जो कभी नहीं सोता — यह बात कोई नहीं बताता।"
+  ON-SCREEN: REPLIES IN 60 SEC
+
+[0:03–0:11] CONTEXT
+  VO: "Demo वाला AI और असली business वाला AI — फ़र्क़ यही है —"
+  ON-SCREEN: WTF GYMS
+
+[0:11–0:19] POINT 1
+  VO: "Lead कुछ मिनटों में ठंडा हो जाता है, और ज़्यादातर gyms घंटों बाद जवाब देते हैं।"
+  ON-SCREEN: LEAD कुछ मिनटों में ठंडा
+
+[0:19–0:27] POINT 2
+  VO: "हमारा AI हर enquiry को 60 सेकंड के अंदर जवाब देता है — 24×7, हिंदी या English।"
+  ON-SCREEN: हमारा AI हर ENQUIRY को
+
+[0:27–0:35] POINT 3
+  VO: "AI qualify करता है और booking कराता है। Trainer close करता है। यही system है।"
+  ON-SCREEN: AI QUALIFY करता है और
+
+[0:35–0:40] PROOF
+  VO: "यह AI पहले हमारे ही gyms में चलता है — उसके बाद ही हम बात करते हैं।"
+  ON-SCREEN: PROOF
+
+[0:40–0:45] CTA
+  VO: "AI से चलने वाले businesses के असली playbooks — follow करो।"
+  ON-SCREEN: FOLLOW
+
+## B-Roll Shot List
+| # | Time | Type | Shot | Overlay |
+|---|------|------|------|---------|
+| 1 | 0:00–0:03 | A-roll | Tight close-up, direct to camera — hook delivered straight to lens | REPLIES IN 60 SEC |
+| 2 | 0:03–0:11 | A-roll + b-roll cutaway | Medium walk-and-talk; cutaway b-roll — phone screen lighting up with a new lead | WTF GYMS |
+| 3 | 0:11–0:19 | b-roll | B-roll — reception desk wide shot, empty chair | A LEAD GOES COLD IN |
+| 4 | 0:19–0:27 | b-roll | B-roll — split screen: chat thread to booked appointment | OUR AI ANSWERS EVERY ENQUIRY |
+| 5 | 0:27–0:35 | b-roll | B-roll — trainer greeting a member at the door | AI QUALIFIES AND BOOKS. TRAINERS |
+| 6 | 0:35–0:40 | b-roll + text card | Proof beat — phone screen lighting up with a new lead + text card | PROOF |
+| 7 | 0:40–0:45 | A-roll | A-roll close, direct CTA; end card with handle | FOLLOW |
+
+## Caption + Hashtags
+
+**Caption (EN):**
+The AI receptionist that never sleeps
+Speed-to-lead is the whole game — the first reply wins the member.
+Follow for the real playbooks behind AI-run businesses.
+
+**Caption (HI):**
+AI receptionist जो कभी नहीं सोता
+Lead की speed ही पूरा game है — पहला जवाब देने वाले का member होता है।
+AI से चलने वाले businesses के असली playbooks — follow करो।
+
+**Hashtags:** #WTFGyms #WTF #AI #AIAgents #Automation #AIIndia #FitnessTech #SpeedToLead #FounderTools #Shorts #Reels #VishalNigam
+
+## Thumbnail Idea
+Concept: Tight close-up on a dark background, headline in gold caps over a maroon gradient. Overlay text: “REPLIES IN 60 SEC”. Expression: confident, mid-sentence. Style: horizontal-safe first frame, WTF maroon #8B0000 + gold #C9A227, no stock-photo look.
+
+## Production Notes
+- Voice: cloned voice; render Hindi + English cuts separately.
+- Avatar: LongCat-Video-Avatar 1.5 (int8 + distill, L40S 48GB) via render-kit.
+- Publishing: DARK in v1. This brief becomes queued jobs; console approval gates every send. LinkedIn stays manual.
+- Facts: no stat goes live without a source — verified at approval time.
+
+$ python brain.py --date 2026-09-16 --pillar founder_journey --json | python -c 'import json,sys; d=json.load(sys.stdin); print(d["id"], "|", d["topic_id"], "|", d["brand"], "|", d["word_counts"], "|", len(d["hashtags"]), "tags", "|", len(d["shot_list"]), "shots", "|", len(d["prompt_audit"]), "prompt-audit rows")'
+cb-2026-09-16-founder_journey-02 | founder_journey-02 | wtf_gyms | {'en': 88, 'hi': 90} | 12 tags | 7 shots | 15 prompt-audit rows

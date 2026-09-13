@@ -1,0 +1,128 @@
+{
+  "checks": [
+    {
+      "codes": [],
+      "detail": "",
+      "id": "integrity",
+      "required": true,
+      "score": 1.0,
+      "status": "pass",
+      "value": {
+        "audio_codec": "aac",
+        "decode_errors": 0,
+        "duration_s": 3.0,
+        "has_audio": true,
+        "has_video": true,
+        "probe_ok": true,
+        "video_codec": "h264"
+      },
+      "weight": 0.0
+    },
+    {
+      "codes": [],
+      "detail": "no black segments detected",
+      "id": "black_frames",
+      "required": true,
+      "score": 1.0,
+      "status": "pass",
+      "value": {
+        "black_ratio": 0.0,
+        "black_seconds": 0,
+        "max_black_ratio": 0.4,
+        "segments": 0
+      },
+      "weight": 1.0
+    },
+    {
+      "codes": [],
+      "detail": "no silence segments detected",
+      "id": "silence",
+      "required": true,
+      "score": 1.0,
+      "status": "pass",
+      "value": {
+        "max_silence_ratio": 0.35,
+        "segments": 0,
+        "silence_ratio": 0.0,
+        "silence_seconds": 0
+      },
+      "weight": 1.0
+    },
+    {
+      "codes": [],
+      "detail": "mean -21.1 dBFS (floor -45.0)",
+      "id": "loudness",
+      "required": false,
+      "score": 1.0,
+      "status": "pass",
+      "value": {
+        "floor_dbfs": -45.0,
+        "max_volume_dbfs": -17.7,
+        "mean_volume_dbfs": -21.1
+      },
+      "weight": 0.5
+    },
+    {
+      "codes": [],
+      "detail": "stub IFACE (v1): no ASR executed; value never fabricated",
+      "id": "lip_sync_wer",
+      "required": false,
+      "score": null,
+      "status": "unavailable",
+      "value": {
+        "metric_status": "unavailable",
+        "metric_value": null
+      },
+      "weight": 3.0
+    },
+    {
+      "codes": [],
+      "detail": "stub IFACE (v1): no embedding computed; value never fabricated",
+      "id": "face_sim",
+      "required": false,
+      "score": null,
+      "status": "unavailable",
+      "value": {
+        "metric_status": "unavailable",
+        "metric_value": null
+      },
+      "weight": 3.0
+    }
+  ],
+  "codes": [],
+  "duration_s": 3.0,
+  "evaluated_at": "2026-09-13T11:40:42Z",
+  "expected_duration_s": null,
+  "gate_id": "wtf-qa-gate-v1",
+  "gate_version": "1.0.0",
+  "policy_id": "wtf-qa-gate-v1",
+  "policy_parser": "pyyaml",
+  "policy_sha256": "ee0966214a9c992770b73efe800d26a23db7b2f3f500abf74c0b8c8407c987c4",
+  "probe": {
+    "audio_codec": "aac",
+    "decode_errors": 0,
+    "decode_ok": true,
+    "duration_s": 3.0,
+    "error": null,
+    "has_audio": true,
+    "has_video": true,
+    "ok": true,
+    "raw_error": "",
+    "video_codec": "h264"
+  },
+  "reasons": [],
+  "score": 100.0,
+  "score_basis": {
+    "available_weight": 2.5,
+    "scored": [
+      "integrity",
+      "black_frames",
+      "silence",
+      "loudness"
+    ],
+    "total_weight": 8.5
+  },
+  "verdict": "accept",
+  "video": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/qa-gate/evidence/demo_media/good.mp4",
+  "video_sha256": "82e767c932a28364fb09d78aeaaaf18e06821f371070ea6cab6a39e55c07db82"
+}

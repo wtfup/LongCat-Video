@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark" />
+<title>WTF Avatar Factory — Approval Console</title>
+<link rel="icon" href="data:," />
+<link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true"><span>W</span><span>T</span><span>F</span></div>
+    <div class="brand-copy">
+      <h1>Avatar Factory</h1>
+      <p>Approval Console · v1</p>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <span id="health-pill" class="pill pill-muted" title="Console + database status">Connecting…</span>
+    <button id="btn-refresh" class="btn btn-ghost" type="button">Refresh</button>
+    <button id="btn-new" class="btn btn-gold" type="button">
+      <svg viewBox="0 0 20 20" width="13" height="13" aria-hidden="true"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+      New job
+    </button>
+  </div>
+</header>
+
+<section class="stats" id="stats" aria-label="Queue statistics"></section>
+
+<section class="toolbar">
+  <div class="chips" id="status-chips" aria-label="Filter by status"></div>
+  <div class="toolbar-right">
+    <input id="search" class="input" type="search" placeholder="Search id / title / brand…" autocomplete="off" />
+    <select id="brand-filter" class="input" aria-label="Filter by brand">
+      <option value="">All brands</option>
+    </select>
+  </div>
+</section>
+
+<main class="board">
+  <div id="grid" class="grid" aria-live="polite"></div>
+  <div id="empty" class="empty" hidden>
+    <div class="empty-mark" aria-hidden="true">✦</div>
+    <h2 id="empty-title">Queue is clear</h2>
+    <p id="empty-copy">New renders will appear here as the factory completes them.</p>
+  </div>
+</main>
+
+<aside id="drawer" class="drawer" hidden aria-label="Job detail"></aside>
+
+<div id="scrim" class="scrim" hidden></div>
+
+<div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h2 id="modal-title">Queue a new job</h2>
+      <button id="modal-close" class="btn btn-ghost btn-icon" type="button" aria-label="Close">✕</button>
+    </div>
+    <form id="new-job-form" class="form">
+      <label>Brand *<input class="input" name="brand" list="brand-options" required placeholder="WTF Gyms" /></label>
+      <datalist id="brand-options"></datalist>
+      <div class="form-row">
+        <label>Pillar *
+          <select class="input" name="pillar" required>
+            <option value="AI systems">AI systems</option>
+            <option value="founder journey">Founder journey</option>
+            <option value="WTF brands">WTF brands</option>
+            <option value="fitness/transformation">Fitness / transformation</option>
+            <option value="business">Business</option>
+          </select>
+        </label>
+        <label>Language *
+          <select class="input" name="language" required>
+            <option value="hi">Hindi (hi)</option>
+            <option value="en">English (en)</option>
+            <option value="hinglish">Hinglish</option>
+          </select>
+        </label>
+      </div>
+      <label>Title<input class="input" name="title" placeholder="Optional working title" /></label>
+      <label>Script<textarea class="input" name="script" rows="7" placeholder="Optional — hook / body / CTA"></textarea></label>
+      <div class="form-actions">
+        <button type="button" id="modal-cancel" class="btn btn-ghost">Cancel</button>
+        <button type="submit" class="btn btn-gold">Queue job</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="toasts" class="toasts" aria-live="polite"></div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

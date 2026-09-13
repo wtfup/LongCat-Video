@@ -1,0 +1,5 @@
+# W3 Render Kit — test/verification dependencies.
+# The package code itself is stdlib-only; on the pilot box the runtime deps
+# are the upstream pins in the repo's requirements.txt / requirements_avatar.txt
+# installed by setup_l40s.sh.
+pytest==8.3.5

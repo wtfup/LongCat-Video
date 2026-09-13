@@ -1,0 +1,9 @@
+# W6 Capture Kit — dependencies
+#
+# Runtime: Python 3.9+ standard library only. No third-party runtime packages.
+# System binaries (required for `--validate`, present on the pilot box via the
+# standard DLAMI + ffmpeg install documented in the parent runbook):
+#   ffprobe / ffmpeg  >= 4.0     (brew install ffmpeg  |  apt install ffmpeg)
+#
+# Tests:
+pytest>=7

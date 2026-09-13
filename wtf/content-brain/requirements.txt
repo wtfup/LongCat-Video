@@ -1,0 +1,6 @@
+# W4 Content Brain — pinned dependencies
+# Runtime: stdlib only (mini-YAML fallback allows operation without PyYAML).
+# PyYAML is used when present for full-fidelity parsing of pillars.yaml.
+PyYAML==6.0.3
+# Tests
+pytest==9.1.1

@@ -1,0 +1,107 @@
+{
+ "verifier_task": "t_c150c232",
+ "swarm_root": "t_3d039441",
+ "verified_at_ist": "2026-09-13T17:25:00+05:30",
+ "gate": "pass",
+ "packages": {
+  "W1_factory_core": {
+   "path": "wtf/factory-core",
+   "tests_passed": 63,
+   "fresh_runs": [
+    "hermes-venv py3.11.14: 63 passed",
+    "uv --no-project --with pytest: 63 passed",
+    "uv --python /usr/bin/python3 (py3.9.6): exit=0"
+   ],
+   "log": "verify_logs/W1_factory_core.log"
+  },
+  "W2_console": {
+   "path": "wtf/console",
+   "tests_passed": 25,
+   "fresh_runs": [
+    "py3.11.14: 25 passed"
+   ],
+   "log": "verify_logs/W2_console.log"
+  },
+  "W3_render_kit": {
+   "path": "wtf/render-kit",
+   "tests_passed": 42,
+   "fresh_runs": [
+    "py3.11.14: 42 passed"
+   ],
+   "log": "verify_logs/W3_render_kit.log"
+  },
+  "W4_content_brain": {
+   "path": "wtf/content-brain",
+   "tests_passed": 70,
+   "fresh_runs": [
+    "package cwd: 70 passed",
+    "/tmp cwd abs tests path: 70 passed"
+   ],
+   "log": "verify_logs/W4_content_brain.log"
+  },
+  "W5_publishers": {
+   "path": "wtf/publishers",
+   "tests_passed": 135,
+   "fresh_runs": [
+    "py3.11.14: 135 passed"
+   ],
+   "log": "verify_logs/W5_publishers.log",
+   "zero_network_probe": "29/29 checks, 0 package socket attempts (verify_logs/publishers_probe_receipt.json)"
+  },
+  "W6_capture_kit": {
+   "path": "wtf/capture-kit",
+   "tests_passed": 31,
+   "fresh_runs": [
+    "py3.11.14 with real ffprobe: 31 passed"
+   ],
+   "log": "verify_logs/W6_capture_kit.log"
+  },
+  "W7_qa_gate": {
+   "path": "wtf/qa-gate",
+   "tests_passed": 72,
+   "fresh_runs": [
+    "py3.11.14: 72 passed"
+   ],
+   "log": "verify_logs/W7_qa_gate.log"
+  }
+ },
+ "total_fresh_tests_passed": 438,
+ "self_audit_blocks": {
+  "main_docs_checked": 14,
+  "all_end_with_section": true,
+  "live0_secrets0_present": true
+ },
+ "secret_scan": {
+  "files_scanned": 313,
+  "hits": 0,
+  "scope": "wtf/** + all 7 worker workspaces + attachments dir"
+ },
+ "w5_checksums": {
+  "manifest": "evidence/checksums.sha256",
+  "verified": "30/30"
+ },
+ "workspace_copies": {
+  "workers_checked": 7,
+  "all_present": true,
+  "spot_identity_checks": "8/8 byte-identical"
+ },
+ "upstream_untouched": {
+  "outside_wtf_modified_after_swarm_start": [
+   "army_dashboard.html (orchestrator live dashboard)"
+  ],
+  "upstream_code_modified": 0
+ },
+ "network_import_scan": {
+  "clean_exceptions": [
+   "publishers/executors.py (function-local urllib, after guard, lazy)",
+   "console/evidence/run_evidence.py (deliberate socket blocker for zero-network proof)"
+  ]
+ },
+ "errata": [],
+ "fixes_applied": 0,
+ "observations": [
+  "wtf/_ops/ + repo-root army_dashboard.html + repo-root .pytest_cache are orchestrator/window artifacts outside W1-W7 scope; decide keep/clean before parent commit; .pytest_cache is not covered by repo .gitignore",
+  "wtf/_data/ intentionally absent; factory DB is created at first use / factoryctl init-db",
+  "W5 deploy boundary stays: multipart-capable executor + chunk segmentation required before enabling X live"
+ ]
+}

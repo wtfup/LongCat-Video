@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "receipt_type": "wtf_avatar_renderkit_bench",
+  "created_at": "2026-09-13T11:37:04Z",
+  "mode": "self_test",
+  "synthetic": true,
+  "measurement_source": "synthetic_fixture",
+  "profile": "l40s_int8_distill_cp1",
+  "host": null,
+  "config": {
+    "stage_1": "ai2v",
+    "resolution": "480p",
+    "num_segments": 3,
+    "repeats": 2,
+    "expected_output_seconds": 10.12,
+    "launcher": null
+  },
+  "budgets": {
+    "sec_per_10s_render": 45.0,
+    "peak_vram_gb": 46.0
+  },
+  "configs": [
+    {
+      "config_id": "l40s_int8_distill_cp1",
+      "expected_output_seconds": 10.12,
+      "measurements": [
+        {
+          "config_id": "l40s_int8_distill_cp1",
+          "repeat": 0,
+          "wall_seconds": 30.0,
+          "exit_code": 0,
+          "timed_out": false,
+          "peak_vram_gb": 41.2,
+          "output_video": "/Users/vishalnigammacminioffice/wtf-avatar-factory/outputs_bench/SYNTHETIC_l40s_int8_distill_cp1_0.mp4",
+          "output_present": true,
+          "synthetic": true,
+          "expected_output_seconds": 10.12,
+          "probe": {
+            "duration_seconds": 10.12,
+            "fps": 25.0,
+            "size_bytes": null
+          },
+          "log_path": null,
+          "log_tail": null
+        },
+        {
+          "config_id": "l40s_int8_distill_cp1",
+          "repeat": 1,
+          "wall_seconds": 31.0,
+          "exit_code": 0,
+          "timed_out": false,
+          "peak_vram_gb": 41.2,
+          "output_video": "/Users/vishalnigammacminioffice/wtf-avatar-factory/outputs_bench/SYNTHETIC_l40s_int8_distill_cp1_1.mp4",
+          "output_present": true,
+          "synthetic": true,
+          "expected_output_seconds": 10.12,
+          "probe": {
+            "duration_seconds": 10.12,
+            "fps": 25.0,
+            "size_bytes": null
+          },
+          "log_path": null,
+          "log_tail": null
+        }
+      ],
+      "metrics": {
+        "runs": 2,
+        "mean_wall_seconds": 30.5,
+        "expected_output_seconds": 10.12,
+        "peak_vram_gb": 41.2,
+        "sec_per_10s_render": 30.138,
+        "renders_per_gpu_hour": 119.451,
+        "gpu_hours_per_content_hour": 3.0138
+      },
+      "gates": [
+        {
+          "id": "runs_exit_zero",
+          "status": "PASS",
+          "detail": "2/2 repeats exited 0 without timeout"
+        },
+        {
+          "id": "outputs_present",
+          "status": "PASS",
+          "detail": "2/2 repeats produced the final mp4"
+        },
+        {
+          "id": "peak_vram_within_budget",
+          "status": "PASS",
+          "detail": "peak 41.20 GB vs budget 46.00 GB"
+        },
+        {
+          "id": "sec_per_10s_within_budget",
+          "status": "PASS",
+          "detail": "30.1 s per 10s render vs budget 45.0 s"
+        }
+      ]
+    },
+    {
+      "config_id": "l40s_int8_distill_cp1_720p_probe",
+      "expected_output_seconds": 10.12,
+      "measurements": [
+        {
+          "config_id": "l40s_int8_distill_cp1_720p_probe",
+          "repeat": 0,
+          "wall_seconds": 58.0,
+          "exit_code": 0,
+          "timed_out": false,
+          "peak_vram_gb": 47.9,
+          "output_video": "/Users/vishalnigammacminioffice/wtf-avatar-factory/outputs_bench/SYNTHETIC_l40s_int8_distill_cp1_720p_probe_0.mp4",
+          "output_present": true,
+          "synthetic": true,
+          "expected_output_seconds": 10.12,
+          "probe": {
+            "duration_seconds": 10.12,
+            "fps": 25.0,
+            "size_bytes": null
+          },
+          "log_path": null,
+          "log_tail": null
+        },
+        {
+          "config_id": "l40s_int8_distill_cp1_720p_probe",
+          "repeat": 1,
+          "wall_seconds": 60.0,
+          "exit_code": 0,
+          "timed_out": false,
+          "peak_vram_gb": 47.9,
+          "output_video": "/Users/vishalnigammacminioffice/wtf-avatar-factory/outputs_bench/SYNTHETIC_l40s_int8_distill_cp1_720p_probe_1.mp4",
+          "output_present": true,
+          "synthetic": true,
+          "expected_output_seconds": 10.12,
+          "probe": {
+            "duration_seconds": 10.12,
+            "fps": 25.0,
+            "size_bytes": null
+          },
+          "log_path": null,
+          "log_tail": null
+        }
+      ],
+      "metrics": {
+        "runs": 2,
+        "mean_wall_seconds": 59.0,
+        "expected_output_seconds": 10.12,
+        "peak_vram_gb": 47.9,
+        "sec_per_10s_render": 58.3,
+        "renders_per_gpu_hour": 61.75,
+        "gpu_hours_per_content_hour": 5.83
+      },
+      "gates": [
+        {
+          "id": "runs_exit_zero",
+          "status": "PASS",
+          "detail": "2/2 repeats exited 0 without timeout"
+        },
+        {
+          "id": "outputs_present",
+          "status": "PASS",
+          "detail": "2/2 repeats produced the final mp4"
+        },
+        {
+          "id": "peak_vram_within_budget",
+          "status": "FAIL",
+          "detail": "peak 47.90 GB vs budget 46.00 GB"
+        },
+        {
+          "id": "sec_per_10s_within_budget",
+          "status": "FAIL",
+          "detail": "58.3 s per 10s render vs budget 45.0 s"
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "runs": 2,
+    "mean_wall_seconds": 30.5,
+    "expected_output_seconds": 10.12,
+    "peak_vram_gb": 41.2,
+    "sec_per_10s_render": 30.138,
+    "renders_per_gpu_hour": 119.451,
+    "gpu_hours_per_content_hour": 3.0138
+  },
+  "gates": [
+    {
+      "id": "runs_exit_zero",
+      "status": "PASS",
+      "detail": "2/2 repeats exited 0 without timeout"
+    },
+    {
+      "id": "outputs_present",
+      "status": "PASS",
+      "detail": "2/2 repeats produced the final mp4"
+    },
+    {
+      "id": "peak_vram_within_budget",
+      "status": "PASS",
+      "detail": "peak 41.20 GB vs budget 46.00 GB"
+    },
+    {
+      "id": "sec_per_10s_within_budget",
+      "status": "PASS",
+      "detail": "30.1 s per 10s render vs budget 45.0 s"
+    }
+  ],
+  "next_actions": [
+    "Synthetic receipt only \u2014 run `benchmark.py` on the pilot box to get real numbers."
+  ],
+  "notes": [
+    "SYNTHETIC receipt produced by --self-test: numbers are fixtures that exercise the metrics and gate logic, NOT measurements of real hardware.",
+    "Do not use these numbers for capacity planning; run benchmark.py on the pilot box."
+  ],
+  "self_test_checks": [
+    {
+      "check": "receipt_required_keys",
+      "status": "PASS",
+      "detail": "all present"
+    },
+    {
+      "check": "receipt_marked_synthetic",
+      "status": "PASS",
+      "detail": "synthetic=True source=synthetic_fixture"
+    },
+    {
+      "check": "metrics_arithmetic_recomputed",
+      "status": "PASS",
+      "detail": "consistent"
+    },
+    {
+      "check": "gate_paths_exercised",
+      "status": "PASS",
+      "detail": "statuses: ['FAIL', 'PASS']"
+    },
+    {
+      "check": "json_roundtrip",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "superseded_previous": true
+}

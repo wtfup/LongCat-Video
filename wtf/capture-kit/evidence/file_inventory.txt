@@ -1,0 +1,33 @@
+WTF CAPTURE KIT — FILE INVENTORY
+generated_at: 2026-09-13T11:36:51+00:00
+package: /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit
+NOTE: SECTION B count includes this inventory file; it is not self-listed (nothing hashes itself).
+
+[SECTION A — AUTHORED] 8 files (code, tests, docs)
+6791d531f0542a7ed4bb2f016f31b9c235acc72606a1bb370f55968274cd6d81       6139  CAPTURE_CHECKLIST.md
+2a71f768be9f147dfb578890dc972f99933fedc691a1f76194ea92e0b603e106       6806  README.md
+62a13cbef71ccba583a08612a215c830fef3ac08c500b098f40db83fde8b6c51       9667  SHOT_LIST.md
+d54a6b7662411f3919f5ad3f886eadb5c9c4ed65b962ebad4b840849da7d0add      27987  intake.py
+973f296fb5d8f327289984a8d7af7f81d5105260a54f59465769e8ceeccfd8d9        362  requirements.txt
+c1f093990167d1710e1584e6df07ae2853069d699e1455a9ae31f604eb3fce7d        266  tests/conftest.py
+0ca8f8b33cd3b15103ad7af9b640c9d79f7e3f55d18954a829de793ef25d697a      15024  tests/test_intake.py
+86ebdad7f9fab9535a121aef22b2eba0f453449889b48a12416b62487647d1eb       5546  voice_requirements.md
+
+[SECTION B — EVIDENCE / GENERATED] 18 files
+ef46361f0f97dee37ccfd67d8943573d1ce3c68745e55c5a2228401c7f8008f1      26241  evidence/demo/assets-root/assets/face_clips/WTF_20260914_o2_f_hindi_mono_t1.mp4
+34e3859e1a08f8c4ef248076b449bd4bcbe995f3be9906220e5def41eca35971    1846119  evidence/demo/assets-root/assets/refs/WTF_20260914_o1_f_neutral_t1.mp4
+561bf96e7314d08e7661f80bb9025175bdce6b044f3142d9031a6684b6184a85      58627  evidence/demo/assets-root/assets/refs/WTF_20260914_o1_f_still_01.jpg
+5cffdd4793d2c7986a33d893ef9f6e29f84420b47f145c3669ecc971581941e7     288044  evidence/demo/assets-root/assets/voice/WTF_20260914_o1_f_casual_t1.wav
+8b116ac6497f9f26f4fa4f03f260d2a74505b118967fbb9308d95d83ce77b13e       7393  evidence/demo/assets-root/manifest.json
+ef875a1705a5fdac206be996f4dc1f726ea6b68861eb741c37def7277f179e37          4  evidence/demo/raw/.DS_Store
+5cffdd4793d2c7986a33d893ef9f6e29f84420b47f145c3669ecc971581941e7     288044  evidence/demo/raw/WTF_20260914_o1_f_casual_t1.wav
+34e3859e1a08f8c4ef248076b449bd4bcbe995f3be9906220e5def41eca35971    1846119  evidence/demo/raw/WTF_20260914_o1_f_neutral_t1.mp4
+561bf96e7314d08e7661f80bb9025175bdce6b044f3142d9031a6684b6184a85      58627  evidence/demo/raw/WTF_20260914_o1_f_still_01.jpg
+ef46361f0f97dee37ccfd67d8943573d1ce3c68745e55c5a2228401c7f8008f1      26241  evidence/demo/raw/WTF_20260914_o2_f_hindi_mono_t1.mp4
+932d2676c1e461ba50d559bba416fbc6af8da1f74309ae81370c615223d0e349         13  evidence/demo/raw/session_notes.pdf
+ac3b6f3beacef0ed8f5478d1710c70673dde15df8896b7cad2c2357b1782053f       1698  evidence/dry-run-demo.txt
+21db7cbc1375faea33db8a4bc249c184eff2b97d7f9a6532c4a38bcc0fa1966b        956  evidence/pytest-red.txt
+da84dd07daf56f630af2948d6769a91fc56fbfaf7237fff9bef42d7bcf21d7c6       3514  evidence/pytest-run.txt
+63e63d35f4e7f2e472c30eb738f01717efe18906d2637935bda40136f7ed73cc       1777  evidence/real-run-demo.txt
+9b0c9e4ab080e4c8fb70259aeda49484e8b8434237f89f00e0d5fc1705a92c40        439  evidence/secret-scan.txt
+9e659f22970e4c7ec37d27afbe387e5824dceb6b3e28bf9014d1081248ea0b02        548  evidence/self-check.txt

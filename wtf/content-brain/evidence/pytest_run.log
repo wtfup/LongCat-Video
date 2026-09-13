@@ -1,0 +1,6 @@
+$ cd /tmp && python -m pytest /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/content-brain/tests -q   (fresh invocation, external cwd)
+======================================================================
+Sun Sep 13 17:09:03 IST 2026
+......................................................................   [100%]
+70 passed in 0.98s
+exit=0

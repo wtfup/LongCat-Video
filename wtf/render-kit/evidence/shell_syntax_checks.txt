@@ -1,0 +1,4 @@
+# bash -n syntax checks — 2026-09-13T11:37:04Z
+OK   bash -n setup_l40s.sh
+OK   bash -n download_weights.sh
+NOTE shellcheck not installed on this machine (bash -n only)

@@ -1,0 +1,165 @@
+{
+  "package": "/Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/content-brain",
+  "files": {
+    "README.md": {
+      "sha256": "2c2351618a0895f6cf906a34b765a1a6eef44e2c0efabf496bac6e2f20975dfa",
+      "bytes": 4833
+    },
+    "brain.py": {
+      "sha256": "d68efb237b6867346dd85bf0918715f3e198607ffff9ae068cdce7468bb858be",
+      "bytes": 25170
+    },
+    "calendar.py": {
+      "sha256": "99e9a18c2ccbf5026e530a3f6197766445dd1e0ee56d9361c51b0c1ca87d1cb9",
+      "bytes": 9914
+    },
+    "evidence/calendar_plan.log": {
+      "sha256": "4fd7149c0eef86cab4d5813088a95fd88179319399455cf00e233f76830843ed",
+      "bytes": 2762
+    },
+    "evidence/demo_daily_brief.log": {
+      "sha256": "39aeb753bc8ee5acf43716447ea7824165537f556c52c5dc791d7c842fdfd6d5",
+      "bytes": 5852
+    },
+    "evidence/enqueue_demo.db": {
+      "sha256": "2e95a2ee45f0f3764925a0c6ef3c01d5cbd64735223c42a5b1b572e58a775f02",
+      "bytes": 53248
+    },
+    "evidence/enqueue_demo.log": {
+      "sha256": "1e3e9381ad33916074aed2a04a72a2d3ef3ee2b73f553995b1b592b29724b61f",
+      "bytes": 2990
+    },
+    "evidence/pytest_run.log": {
+      "sha256": "4d588e054e0cad6c7e3ddd2c15ce2ff5a186b7757f8ecaaf0290b699b34d3366",
+      "bytes": 349
+    },
+    "evidence/red_initial.log": {
+      "sha256": "2ad71af27b4b68e3a2f368babea7a39cd1ae7e5c5a29c7395844ceed70e4105d",
+      "bytes": 4577
+    },
+    "evidence/samples_run.log": {
+      "sha256": "6259b573cda9fbcc6e35d27ad1a49369b7438f3a80678bf09f9f75f10efbe0d0",
+      "bytes": 1340
+    },
+    "pillars.yaml": {
+      "sha256": "c0f9e254b56559419a35c68f87c7db91a9a55a1afa4191124393744395cff43a",
+      "bytes": 29346
+    },
+    "prompts/caption_hashtags.md": {
+      "sha256": "c0909974496561d72620f4302cc0b972cc6e72085e11e8c68320a14d2a86e20b",
+      "bytes": 515
+    },
+    "prompts/daily_brief.md": {
+      "sha256": "8ef711d7971c863ac3062f859e010e3c8b3fa5013f466846f6d7dfbf6749ee1a",
+      "bytes": 1033
+    },
+    "prompts/script_45s_en.md": {
+      "sha256": "458e8dd46ea11175822925302b31c0a9d22002a281e6bc7ab89e478b42ef2b50",
+      "bytes": 643
+    },
+    "prompts/script_45s_hi.md": {
+      "sha256": "03e8a4f68c578ca3a8b1e68494f0971a54522c53dd47875d22c03cd5b4a860ed",
+      "bytes": 879
+    },
+    "prompts/shot_list.md": {
+      "sha256": "d870e470fd4e1adae4050018c934bb0192e3cc1c3165185ddad6d8e03d976472",
+      "bytes": 516
+    },
+    "prompts/system.md": {
+      "sha256": "e2edc9425e4e2b6243e1f7497bf7a147927880262bd72ad766d3974bc79dd7cc",
+      "bytes": 1287
+    },
+    "prompts/thumbnail.md": {
+      "sha256": "3527734cb2acdfdb238c5681e67932f5243bef63685f2f23c1df162c122197a8",
+      "bytes": 558
+    },
+    "providers.py": {
+      "sha256": "ba8592489655a0307b4dab8795956dbbe9541779d1d13f30ecef4580a7514248",
+      "bytes": 8865
+    },
+    "requirements.txt": {
+      "sha256": "dcb73ac9d0f2c9e5216ac519a98bf967996304fe666c7eca75e7a3449cbb1808",
+      "bytes": 229
+    },
+    "samples/brief_01_ai_systems-01.md": {
+      "sha256": "226ea74c08bd718cfb1a6c263c160c5bd30ab7ddf1b7143106e70ed3292872fd",
+      "bytes": 5262
+    },
+    "samples/brief_02_ai_systems-02.md": {
+      "sha256": "e48bade4a67a7a985717cb5424124f480d995ef1451714ab059100549f869130",
+      "bytes": 5204
+    },
+    "samples/brief_03_founder_journey-01.md": {
+      "sha256": "d68a6b5a139817f3b79f08d4197b687dc90e1d1f50e64494dc4c55fbd75d8116",
+      "bytes": 5392
+    },
+    "samples/brief_04_founder_journey-02.md": {
+      "sha256": "5d962debb9058ffcfbf0741208cfbdbb7a62ae591c34bf5f874f384a9318278c",
+      "bytes": 5228
+    },
+    "samples/brief_05_wtf_brands-01.md": {
+      "sha256": "54597e37a14cd0c75d4fd7899e42e12c09d4fa5e742ddbfb56245b2bbc763088",
+      "bytes": 5282
+    },
+    "samples/brief_06_wtf_brands-02.md": {
+      "sha256": "8a5bee2525b802e88b812bae6d92f11fd8d4ab70e838d796bd6028ab13d13450",
+      "bytes": 5061
+    },
+    "samples/brief_07_fitness_transformation-01.md": {
+      "sha256": "33154a0b4ff814f4c1c860bf79f2a051a6d4f8e149f3e1ea5557f4e8fd730c91",
+      "bytes": 5260
+    },
+    "samples/brief_08_fitness_transformation-02.md": {
+      "sha256": "e52f34d3295311b297b21657f7c15b25630149f8ae2a50d2095036b264e33396",
+      "bytes": 5292
+    },
+    "samples/brief_09_business-01.md": {
+      "sha256": "9853758329b241dc7457975eb826b4b60c7f3cc61d3387ac16fe09dfaebbb532",
+      "bytes": 5050
+    },
+    "samples/brief_10_business-02.md": {
+      "sha256": "5614a5e6ba8d81029e00384e526d94d2c1bd325a4a04dacd065ca2de7009243e",
+      "bytes": 5000
+    },
+    "samples/index.json": {
+      "sha256": "cfd67010af9a25a57fda6edabd9f7283ba9a8ea10b6bc73ba567490e29c10741",
+      "bytes": 6632
+    },
+    "self_audit.py": {
+      "sha256": "7369225d6b5cf1b1599472fb35bb74b86cbef25e78d314c3d5d9b275245e8769",
+      "bytes": 5994
+    },
+    "tests/conftest.py": {
+      "sha256": "8e48643034af7628794b5a35e7c784f3dcc8567c864e4cc0a82c556d60ae781d",
+      "bytes": 2102
+    },
+    "tests/test_brain.py": {
+      "sha256": "51582f1cfd84c8d2533eccd145fe50dee8104a3870b1f6f05e5f963e54653491",
+      "bytes": 7505
+    },
+    "tests/test_calendar.py": {
+      "sha256": "b3a8c52f3bb0b832df243743bcb20741ce6c487857f84a2c6f2b92b48f3d3a32",
+      "bytes": 7156
+    },
+    "tests/test_pillars.py": {
+      "sha256": "04f7458b8f0109dbee7e09734cbfa017b749ce2d53157eb151c3161e827cb524",
+      "bytes": 4125
+    },
+    "tests/test_prompts.py": {
+      "sha256": "ed07324cabaac2aabc1336e4ed244257d22b785587a6d0ff3ee1876c242f7e3b",
+      "bytes": 2344
+    },
+    "tests/test_providers.py": {
+      "sha256": "f572fda345e5362cb1f1e0dd8bcf7337c0367e9c9f9c8cde4904de3ce30ca6da",
+      "bytes": 4967
+    },
+    "tests/test_samples.py": {
+      "sha256": "69fde195df109b5bf831639c41217c8be8011dfafeb316d4b80955dae6f96627",
+      "bytes": 2898
+    },
+    "tests/test_self_audit.py": {
+      "sha256": "9b7691dc615dff67a7b851bb7877888aebb8f01a327be5804d8de54547a54e98",
+      "bytes": 856
+    }
+  }
+}

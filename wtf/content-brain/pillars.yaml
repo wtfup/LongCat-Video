@@ -1,0 +1,518 @@
+version: "1.0"
+# W4 Content Brain — curated content library.
+# Consumed by brain.py (briefs) and calendar.py (planning).
+# Constrained YAML subset: block style only, no inline comments, no flow lists.
+
+languages:
+  - hi
+  - en
+
+format:
+  aspect: "9:16"
+  duration_s: 45
+  video: "vertical reel / Shorts"
+  max_hashtags: 12
+
+core_hashtags:
+  - "#WTF"
+  - "#Shorts"
+  - "#Reels"
+  - "#VishalNigam"
+
+brands:
+  - id: wtf_gyms
+    label: "WTF Gyms"
+    hashtags:
+      - "#WTFGyms"
+      - "#WTF"
+  - id: wtf_franchise
+    label: "WTF Franchise"
+    hashtags:
+      - "#WTFFranchise"
+      - "#FranchiseIndia"
+  - id: everyday
+    label: "EVRYDAY"
+    hashtags:
+      - "#EVRYDAY"
+      - "#EVRYDAYFit"
+  - id: reboot
+    label: "Reboot"
+    hashtags:
+      - "#WTFReboot"
+      - "#RebootYourself"
+  - id: amplify
+    label: "Amplify"
+    hashtags:
+      - "#AmplifyFitness"
+  - id: wtf_academy
+    label: "WTF Academy"
+    hashtags:
+      - "#WTFAcademy"
+      - "#TrainerLife"
+  - id: wtf_360
+    label: "WTF 360"
+    hashtags:
+      - "#WTF360"
+  - id: digiwtf
+    label: "DigiWTF"
+    hashtags:
+      - "#DigiWTF"
+
+rotation:
+  weekly:
+    monday: ai_systems
+    tuesday: founder_journey
+    wednesday: wtf_brands
+    thursday: fitness_transformation
+    friday: business
+    saturday: fitness_transformation
+    sunday: wtf_brands
+  secondary:
+    - ai_systems
+    - wtf_brands
+    - founder_journey
+    - fitness_transformation
+    - business
+
+pillars:
+  - id: ai_systems
+    label: "AI Systems"
+    label_hi: "AI सिस्टम्स"
+    description_en: "How WTF runs on AI: agents in sales, support and ops, and what founders can copy."
+    default_brand: wtf_gyms
+    hook_templates_en:
+      - "Nobody's telling you this about {topic_lc} —"
+      - "{topic} — in 45 seconds."
+      - "Your competitors already run this: {topic}"
+      - "Stop scrolling. Here's why {topic_lc} changes your numbers."
+    hook_templates_hi:
+      - "{topic} — यह बात कोई नहीं बताता।"
+      - "{topic} — 45 सेकंड में समझो।"
+      - "आपके competitors यह पहले से चला रहे हैं: {topic}"
+      - "रुको — {topic} आपके numbers क्यों बदलता है, देखो।"
+    context_templates_en:
+      - "Here's the difference between AI in a demo and AI in a real business —"
+      - "The gap is never the tech. It's wiring it into daily operations —"
+    context_templates_hi:
+      - "Demo वाला AI और असली business वाला AI — फ़र्क़ यही है —"
+      - "कमी tech की नहीं होती। कमी इसे रोज़ के काम में लगाने की होती है —"
+    cta_templates_en:
+      - "Follow for the real playbooks behind AI-run businesses."
+      - "Comment “AI” and I'll share the exact stack we run."
+      - "Save this before your competitor automates it first."
+    cta_templates_hi:
+      - "AI से चलने वाले businesses के असली playbooks — follow करो।"
+      - "Comment करो “AI” — हमारा exact stack भेजूँगा।"
+      - "Save कर लो, इससे पहले कि competitor automate करे।"
+    hashtags:
+      - "#AI"
+      - "#AIAgents"
+      - "#Automation"
+      - "#AIIndia"
+      - "#FitnessTech"
+      - "#SpeedToLead"
+      - "#FounderTools"
+    thumbnail_concepts:
+      - "Tight close-up on a dark background, headline in gold caps over a maroon gradient"
+      - "Split frame: phone showing a new lead vs. Vishal talking straight to camera"
+      - "Whiteboard frame: one number circled in gold, maroon accent light"
+    expressions:
+      - "confident, mid-sentence"
+      - "deadpan, eyebrow raised"
+    topics:
+      - id: ai_systems-01
+        title_en: "The AI receptionist that never sleeps"
+        title_hi: "AI receptionist जो कभी नहीं सोता"
+        angle_en: "Speed-to-lead is the whole game — the first reply wins the member."
+        angle_hi: "Lead की speed ही पूरा game है — पहला जवाब देने वाले का member होता है।"
+        points_en:
+          - "A lead goes cold in minutes. Most gyms reply in hours."
+          - "Our AI answers every enquiry under 60 seconds — 24×7, Hindi or English."
+          - "AI qualifies and books. Trainers close. That split is the system."
+        points_hi:
+          - "Lead कुछ मिनटों में ठंडा हो जाता है, और ज़्यादातर gyms घंटों बाद जवाब देते हैं।"
+          - "हमारा AI हर enquiry को 60 सेकंड के अंदर जवाब देता है — 24×7, हिंदी या English।"
+          - "AI qualify करता है और booking कराता है। Trainer close करता है। यही system है।"
+        proof_en: "We run this AI across our own gyms first — only then do we talk about it."
+        proof_hi: "यह AI पहले हमारे ही gyms में चलता है — उसके बाद ही हम बात करते हैं।"
+        props:
+          - "phone screen lighting up with a new lead"
+          - "reception desk wide shot, empty chair"
+          - "split screen: chat thread to booked appointment"
+          - "trainer greeting a member at the door"
+        thumb_text: "REPLIES IN 60 SEC"
+      - id: ai_systems-02
+        title_en: "Your next employee won't be human"
+        title_hi: "आपका अगला employee इंसान नहीं होगा"
+        angle_en: "Founders are handing busywork to agent teams — and keeping humans for judgment."
+        angle_hi: "Founders बिज़ी-वर्क agent teams को सौंप रहे हैं — और इंसान सिर्फ़ judgment के लिए रख रहे हैं।"
+        points_en:
+          - "Every founder drowns in follow-ups, reports and the same support questions."
+          - "An AI ops team doesn't get tired, doesn't forget, doesn't need a weekend."
+          - "Keep humans for judgment, relationships and the closing table."
+        points_hi:
+          - "हर founder follow-ups, reports और एक जैसे support सवालों में डूबा रहता है।"
+          - "AI ops team थकती नहीं, भूलती नहीं, weekend की मोहताज नहीं होती।"
+          - "इंसान judgment, रिश्तों और closing table के लिए रखो।"
+        proof_en: "My agent stack runs sales follow-ups, support and content — every single day."
+        proof_hi: "मेरा agent stack हर दिन sales follow-ups, support और content चलाता है।"
+        props:
+          - "laptop dashboard with a running task queue"
+          - "phone notification stream timelapse"
+          - "founder reviewing a screen late at night"
+          - "coffee cup next to a blinking server light"
+        thumb_text: "AI TEAM, 24×7"
+
+  - id: founder_journey
+    label: "Founder Journey"
+    label_hi: "Founder का सफ़र"
+    description_en: "The lessons, numbers and scars of building WTF — told straight, no highlight reel."
+    default_brand: wtf_gyms
+    hook_templates_en:
+      - "{topic} — the part nobody posts."
+      - "I paid for this lesson so you don't have to: {topic}"
+      - "If you're building something, hear this: {topic}"
+      - "The feed won't show you this: {topic}"
+    hook_templates_hi:
+      - "{topic} — वो हिस्सा जो कोई post नहीं करता।"
+      - "यह सबक मैंने महँगा खरीदा है: {topic}"
+      - "अगर तुम कुछ बना रहे हो, तो यह सुनो: {topic}"
+      - "Feed तुम्हें यह नहीं दिखाएगा: {topic}"
+    context_templates_en:
+      - "Everybody shows the wins. Let me show you the months in between —"
+      - "This part of the story never makes it to the feed —"
+    context_templates_hi:
+      - "सब जीत दिखाते हैं। मैं बीच के महीने दिखाता हूँ —"
+      - "कहानी का यह हिस्सा कभी feed तक नहीं पहुँचता —"
+    cta_templates_en:
+      - "Follow — I post the real numbers and the real lessons."
+      - "If this hit, share it with someone in the middle of their build."
+      - "Save this for the day you want to quit."
+    cta_templates_hi:
+      - "Follow करो — मैं असली numbers और असली सबक post करता हूँ।"
+      - "अगर बात लगी, तो किसी builder को भेजो।"
+      - "इसे save कर लो — उस दिन के लिए जब छोड़ने का मन करे।"
+    hashtags:
+      - "#FounderJourney"
+      - "#StartupIndia"
+      - "#Entrepreneurship"
+      - "#FounderLife"
+      - "#BuildInPublic"
+      - "#StartupLessons"
+      - "#IndianStartups"
+    thumbnail_concepts:
+      - "Grainy early-days photo treatment with a gold caption strip"
+      - "Desk at night: laptop glow, maroon wall behind"
+      - "Close-up of a handwritten notebook, one line underlined in gold"
+    expressions:
+      - "honest, direct to lens"
+      - "tired but smiling"
+    topics:
+      - id: founder_journey-01
+        title_en: "The boring middle of building something big"
+        title_hi: "कुछ बड़ा बनाने का boring middle"
+        angle_en: "Everyone posts the start and the win. The middle is where it's actually won."
+        angle_hi: "सब शुरुआत और जीत post करते हैं। असली जीत बीच के हिस्से में होती है।"
+        points_en:
+          - "Month six to month thirty-six is one long test of whether you keep showing up."
+          - "No virality, no applause — just rent, payroll and another opening."
+          - "The winners aren't the smartest people in the room. They're the ones still there."
+        points_hi:
+          - "महीना छह से महीना छत्तीस — बस एक लंबा इम्तिहान कि तुम आते रहते हो या नहीं।"
+          - "ना viral, ना तालियाँ — बस rent, salary और अगली opening।"
+          - "जीत सबसे तेज़ दिमाग़ की नहीं होती — उनकी होती है जो अब भी खड़े हैं।"
+        proof_en: "I still do the boring parts myself — reviews, rosters, numbers."
+        proof_hi: "मैं आज भी बोरिंग काम खुद करता हूँ — reviews, rosters, numbers।"
+        props:
+          - "empty gym at 5:30am as the lights come on"
+          - "keys opening the shutter"
+          - "whiteboard with the month plan"
+          - "founder walking the floor alone"
+        thumb_text: "THE MIDDLE WINS"
+      - id: founder_journey-02
+        title_en: "Hire slow, fire fast — the expensive lesson"
+        title_hi: "Hire slow, fire fast — यह सबक महँगा पड़ा"
+        angle_en: "One wrong hire doesn't just cost a salary — it costs every customer they touch."
+        angle_hi: "एक गलत hire सिर्फ़ salary नहीं लेता — उन customers की कीमत भी लेता है जिन्हें वह छूता है।"
+        points_en:
+          - "A wrong hire in a leadership seat sets you back a year, not a month."
+          - "Waiting 'one more quarter' makes it worse for everyone — including them."
+          - "Standards are a system: write them, measure them, act on them fast."
+        points_hi:
+          - "Leadership seat पर एक गलत hire साल भर पीछे कर देता है — महीना नहीं।"
+          - "'एक और quarter देख लेते हैं' — सबके लिए और बुरा करता है।"
+          - "Standards एक system है: लिखो, नापो, और फ़ौरन लागू करो।"
+        proof_en: "Every exit taught me something the interview missed. I fixed the interviews."
+        proof_hi: "हर exit ने बताया interview में क्या छूटा। मैंने interviews ठीक किए।"
+        props:
+          - "interview table with two empty chairs"
+          - "offer letter close-up"
+          - "calendar pages flipping"
+          - "one-on-one conversation across a desk"
+        thumb_text: "FIRE FAST"
+
+  - id: wtf_brands
+    label: "WTF Brands"
+    label_hi: "WTF के Brands"
+    description_en: "Inside the WTF ecosystem: gyms, franchise, EVRYDAY, Reboot, Amplify, Academy, 360, DigiWTF."
+    default_brand: wtf_gyms
+    hook_templates_en:
+      - "Inside the WTF ecosystem: {topic}"
+      - "{topic} — that's what we actually built."
+      - "Here's what {topic} really means."
+      - "One more thing we're building — {topic}"
+    hook_templates_hi:
+      - "WTF ecosystem के अंदर: {topic}"
+      - "{topic} — यही हमने बनाया है।"
+      - "{topic} का असल मतलब यह है।"
+      - "हम एक और चीज़ बना रहे हैं — {topic}"
+    context_templates_en:
+      - "We didn't just build gyms. We built a company around one mission —"
+      - "Here's where this fits inside the WTF ecosystem —"
+    context_templates_hi:
+      - "हमने सिर्फ़ gyms नहीं बनाए। एक mission के चारों तरफ़ company बनाई —"
+      - "यह WTF ecosystem में कहाँ फ़िट होता है —"
+    cta_templates_en:
+      - "Follow to see what we build next."
+      - "Find your nearest WTF — link in bio."
+      - "Follow along — we build in the open."
+    cta_templates_hi:
+      - "Follow करो — अगला क्या बनाते हैं, देखो।"
+      - "अपना nearest WTF ढूंढो — link bio में है।"
+      - "साथ चलो — हम खुलकर बनाते हैं।"
+    hashtags:
+      - "#WTFGyms"
+      - "#WTF"
+      - "#FitnessIndia"
+      - "#GymLife"
+      - "#WTFCommunity"
+      - "#TrainTheTrainer"
+      - "#MadeInIndia"
+    thumbnail_concepts:
+      - "Logo-forward frame: brand mark in gold on maroon, subject to the right"
+      - "Gym environment hero shot with a brand-color grade"
+      - "Two-panel: brand wordmark, then the product in use"
+    expressions:
+      - "proud, energetic"
+      - "warm, welcoming"
+    topics:
+      - id: wtf_brands-01
+        brand: wtf_academy
+        title_en: "WTF Academy: building India's next generation of trainers"
+        title_hi: "WTF Academy: India के अगले trainers तैयार कर रहे हैं"
+        angle_en: "The fitness industry doesn't have a member problem — it has a trainer-quality problem."
+        angle_hi: "Fitness industry की असली समस्या members नहीं — trainers की quality है।"
+        points_en:
+          - "Great trainers change lives. Average trainers hand members to the competition."
+          - "Academy teaches programming, coaching, communication and career discipline."
+          - "We don't just certify trainers — we give them a floor to grow on."
+        points_hi:
+          - "अच्छे trainers ज़िंदगी बदलते हैं। औसत trainers members competitor को सौंप देते हैं।"
+          - "Academy programming, coaching, communication और career discipline सिखाती है।"
+          - "हम सिर्फ़ certificate नहीं देते — grow करने का floor देते हैं।"
+        proof_en: "Our own gyms are the first employer of the Academy pipeline."
+        proof_hi: "Academy के pipeline का पहला employer हमारे ही gyms हैं।"
+        props:
+          - "trainer coaching a member on squat form"
+          - "classroom session with a whiteboard"
+          - "certificate handover close-up"
+          - "trainee rehearsing cues on the floor"
+        thumb_text: "TRAIN THE TRAINERS"
+      - id: wtf_brands-02
+        brand: everyday
+        title_en: "EVRYDAY: fitness essentials without the markup"
+        title_hi: "EVRYDAY: बिना भारी दाम वाली fitness essentials"
+        angle_en: "Fitness products shouldn't cost premium. EVRYDAY exists for the daily basics."
+        angle_hi: "Fitness products महँगे होने की ज़रूरत नहीं। EVRYDAY रोज़ की ज़रूरतों के लिए है।"
+        points_en:
+          - "Too many fitness brands sell you packaging, not product."
+          - "EVRYDAY is our direct-to-member label: honest products, honest price."
+          - "Built inside the gym ecosystem — tested by people who actually train."
+        points_hi:
+          - "बहुत से fitness brands product नहीं, packaging बेचते हैं।"
+          - "EVRYDAY हमारा direct-to-member label है: साफ़ product, साफ़ दाम।"
+          - "Gym ecosystem के अंदर बना — उन लोगों ने test किया जो खुद train करते हैं।"
+        proof_en: "It started as the label we wanted for our own members."
+        proof_hi: "शुरुआत वह label बनाने से हुई जो हमें अपने members के लिए चाहिए था।"
+        props:
+          - "product flat-lay on a gym bench"
+          - "unboxing shot, hands only"
+          - "member using the product mid-workout"
+          - "shelf comparison: quality next to a price tag"
+        thumb_text: "EVRYDAY ESSENTIALS"
+
+  - id: fitness_transformation
+    label: "Fitness & Transformation"
+    label_hi: "Fitness और Transformation"
+    description_en: "Systems that actually transform bodies — training, nutrition, recovery, consistency."
+    default_brand: wtf_gyms
+    hook_templates_en:
+      - "{topic} — forget motivation, use this."
+      - "Steal this: {topic}"
+      - "This is why your last plan failed: {topic}"
+      - "{topic} — 45 seconds, real talk."
+    hook_templates_hi:
+      - "{topic} — motivation भूलो, यह करो।"
+      - "यह चुरा लो: {topic}"
+      - "तुम्हारा पिछला plan इसलिए fail हुआ: {topic}"
+      - "{topic} — 45 सेकंड, सीधी बात।"
+    context_templates_en:
+      - "Forget motivation. Systems move the scale and keep it moving —"
+      - "This isn't a challenge. It's a routine you can keep —"
+    context_templates_hi:
+      - "Motivation भूल जाओ। काम system करता है, और करता रहता है —"
+      - "यह challenge नहीं है। यह ऐसा routine है जो चलता रहे —"
+    cta_templates_en:
+      - "Follow for plans you can actually keep."
+      - "Save this and start tomorrow — not Monday."
+      - "Tag someone who needs the 20-minute version."
+    cta_templates_hi:
+      - "Follow करो — ऐसे plans के लिए जो निभ सकें।"
+      - "Save करो और कल से शुरू करो — Monday का इंतज़ार मत करो।"
+      - "Tag करो उसे जिसे 20-मिनट वाला version चाहिए।"
+    hashtags:
+      - "#Transformation"
+      - "#FitIndia"
+      - "#FitnessMotivation"
+      - "#StrengthTraining"
+      - "#HealthyHabits"
+      - "#Consistency"
+      - "#GymTok"
+    thumbnail_concepts:
+      - "Motion-blur training shot with a gold split-screen before/after"
+      - "Simple plate of food and a gym bag flat-lay on a maroon backdrop"
+      - "Phone lock-screen with a 20:00 timer, over-the-shoulder angle"
+    expressions:
+      - "coach-energy, focused"
+      - "calm, matter-of-fact"
+    topics:
+      - id: fitness_transformation-01
+        title_en: "A transformation is a system — not a miracle"
+        title_hi: "Transformation एक system है — चमत्कार नहीं"
+        angle_en: "Stop chasing motivation. Build the four-part system that runs without it."
+        angle_hi: "Motivation के पीछे भागना छोड़ो। वह system बनाओ जो बिना उसके चले।"
+        points_en:
+          - "Train four to five times a week. The plan matters less than the repetition."
+          - "Protein at every meal. You can't out-train a bad kitchen."
+          - "Sleep and walk more. Change compounds in recovery."
+        points_hi:
+          - "हफ़्ते में चार-पाँच बार train करो। Plan से ज़्यादा repetition मायने रखती है।"
+          - "हर meal में protein। खराब kitchen को कोई training beat नहीं कर सकती।"
+          - "नींद और चलना बढ़ाओ। असली बदलाव recovery में compound होता है।"
+        proof_en: "The same system runs on our floors with real members, every day."
+        proof_hi: "यही system रोज़ हमारे floors पर असली members के साथ चलता है।"
+        props:
+          - "training montage cut with matched framing"
+          - "plate with a simple high-protein meal"
+          - "phone showing sleep score and step count"
+          - "coach ticking off a member's chart"
+        thumb_text: "SYSTEM > MIRACLE"
+      - id: fitness_transformation-02
+        title_en: "20 minutes beats zero — consistency wins"
+        title_hi: "20 मिनट > शून्य — consistency जीतती है"
+        angle_en: "The best workout plan is the one you'll actually repeat on your busiest day."
+        angle_hi: "सबसे अच्छा plan वही है जो तुम्हारे सबसे busy दिन में भी निभे।"
+        points_en:
+          - "Busy people don't need longer workouts — they need a shorter default."
+          - "Twenty focused minutes, five days a week beats one heroic two-hour session."
+          - "Track streaks, not soreness. What gets counted gets repeated."
+        points_hi:
+          - "Busy लोगों को लंबी workout नहीं चाहिए — छोटा default चाहिए।"
+          - "हफ़्ते में पाँच दिन, बीस फ़ोकस्ड मिनट — एक भारी 2-घंटे की session से बेहतर।"
+          - "Soreness नहीं, streak track करो। जो गिना जाता है वही दोहराया जाता है।"
+        proof_en: "Our trainers build 20-minute versions for members who travel."
+        proof_hi: "हमारे trainers travel करने वाले members के लिए 20-मिनट के versions बनाते हैं।"
+        props:
+          - "timer close-up hitting 20:00"
+          - "hotel-room style quick workout"
+          - "calendar with a run of streak marks"
+          - "member leaving the gym in a hurry, satisfied"
+        thumb_text: "20 MIN BEATS ZERO"
+
+  - id: business
+    label: "Business"
+    label_hi: "Business"
+    description_en: "Owner-level lessons: unit economics, incentives, culture and scaling without breaking."
+    default_brand: wtf_gyms
+    hook_templates_en:
+      - "{topic} — most owners learn this too late."
+      - "Straight business talk: {topic}"
+      - "{topic}"
+      - "If you own a business, pin this: {topic}"
+    hook_templates_hi:
+      - "{topic} — ज़्यादातर owners देर से सीखते हैं।"
+      - "सीधी business बात: {topic}"
+      - "{topic}"
+      - "अगर business चलाते हो, यह save करो: {topic}"
+    context_templates_en:
+      - "This is the advice I wish someone gave me on day one —"
+      - "Run the numbers before you run the ads —"
+    context_templates_hi:
+      - "यह सलाह मुझे day one पर मिलनी चाहिए थी —"
+      - "Ads से पहले numbers चलाओ —"
+    cta_templates_en:
+      - "Follow for owner-level business breakdowns."
+      - "Save this for your next pricing meeting."
+      - "Comment your unit economics — let's talk."
+    cta_templates_hi:
+      - "Owner-level business breakdowns के लिए follow करो।"
+      - "अगली pricing meeting के लिए save कर लो।"
+      - "Comment में अपनी unit economics लिखो।"
+    hashtags:
+      - "#Business"
+      - "#UnitEconomics"
+      - "#Leadership"
+      - "#BusinessLessons"
+      - "#ScaleUp"
+      - "#FounderMindset"
+      - "#Pricing"
+    thumbnail_concepts:
+      - "One number in gold on deep maroon, everything else blurred"
+      - "Whiteboard with CAC vs LTV drawn in two colors"
+      - "Split frame: revenue chart against the cost stack"
+    expressions:
+      - "direct, boardroom calm"
+      - "challenging, eyebrow raised"
+    topics:
+      - id: business-01
+        title_en: "Unit economics: the one number that decides everything"
+        title_hi: "Unit economics: वह एक number जो सब तय करता है"
+        angle_en: "Growth without unit economics is just an expensive way to go out of business."
+        angle_hi: "Unit economics के बिना growth — business बंद करने का महँगा तरीका है।"
+        points_en:
+          - "Know what one customer costs you and what one customer gives you."
+          - "If that gap is negative, no amount of hustle fixes the math."
+          - "Fix margins first, scale second — never the other way around."
+        points_hi:
+          - "जानो एक customer कितने का पड़ता है और कितना देता है।"
+          - "अगर gap negative है, कोई hustle maths नहीं ठीक कर सकता।"
+          - "पहले margin ठीक करो, फिर scale — कभी उल्टा नहीं।"
+        proof_en: "Every WTF vertical gets reviewed on margin per member, per month."
+        proof_hi: "हर WTF vertical की समीक्षा margin per member, per month पर होती है।"
+        props:
+          - "calculator and notebook with two numbers beside it"
+          - "blurred dashboard on a screen"
+          - "founder whiteboarding CAC vs LTV"
+          - "walk-in shot with a footfall counter"
+        thumb_text: "FIX THE MATH"
+      - id: business-02
+        title_en: "Culture is a system — incentives decide behavior"
+        title_hi: "Culture एक system है — incentives behaviour तय करते हैं"
+        angle_en: "Your team doesn't do what you say. They do what gets rewarded."
+        angle_hi: "टीम वो नहीं करती जो तुम कहते हो। वो करती है जिसका reward मिलता है।"
+        points_en:
+          - "Change the incentive and the behaviour changes within one cycle."
+          - "Vague goals create vague effort. Scoreboards create clarity."
+          - "Design for the floor: simple numbers your people can win every week."
+        points_hi:
+          - "Incentive बदलो — behaviour एक cycle में बदल जाता है।"
+          - "धुँधले goals से धुँधली मेहनत आती है। Scoreboard साफ़ियत देता है।"
+          - "Floor के लिए design करो: ऐसे numbers जो हर हफ़्ते जीते जा सकें।"
+        proof_en: "We run weekly scoreboard incentives across our clubs — and we publish them."
+        proof_hi: "हम clubs में हर हफ़्ते scoreboard incentives चलाते हैं — और publish करते हैं।"
+        props:
+          - "leaderboard on a screen above the floor"
+          - "whiteboard with weekly targets"
+          - "team huddle on the gym floor"
+          - "recognition moment with applause"
+        thumb_text: "REWARD DRIVES"

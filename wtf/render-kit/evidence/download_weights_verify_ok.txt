@@ -1,0 +1,20 @@
+
+==> Verifying expected layout under /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/render-kit/evidence/scratch/fake_weights
+-- avatar checkpoint: /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/render-kit/evidence/scratch/fake_weights/LongCat-Video-Avatar-1.5
+  ok   /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/render-kit/evidence/scratch/fake_weights/LongCat-Video-Avatar-1.5/base_model_int8/config.json
+  ok   /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/render-kit/evidence/scratch/fake_weights/LongCat-Video-Avatar-1.5/base_model_int8/*.safetensors (single-file fallback)
+  ok   /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/render-kit/evidence/scratch/fake_weights/LongCat-Video-Avatar-1.5/lora/dmd_lora.safetensors
+  ok   /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/render-kit/evidence/scratch/fake_weights/LongCat-Video-Avatar-1.5/scheduler
+  ok   /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/render-kit/evidence/scratch/fake_weights/LongCat-Video-Avatar-1.5/whisper-large-v3
+  ok   /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/render-kit/evidence/scratch/fake_weights/LongCat-Video-Avatar-1.5/vocal_separator/Kim_Vocal_2.onnx
+-- shared foundation: /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/render-kit/evidence/scratch/fake_weights/LongCat-Video
+  ok   /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/render-kit/evidence/scratch/fake_weights/LongCat-Video/tokenizer
+  ok   /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/render-kit/evidence/scratch/fake_weights/LongCat-Video/text_encoder
+  ok   /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/render-kit/evidence/scratch/fake_weights/LongCat-Video/vae
+
+==> Layout OK — all required paths present
+
+==> Wrote manifest: /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/render-kit/evidence/scratch/fake_weights/download_manifest.txt
+
+==> Done. Next: python run_avatar.py --dry-run
+EXIT=0

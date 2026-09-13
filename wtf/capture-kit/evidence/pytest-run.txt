@@ -1,0 +1,41 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.14, pytest-9.1.1, pluggy-1.6.0 -- /Users/vishalnigammacminioffice/.hermes/hermes-agent/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/vishalnigammacminioffice/wtf-avatar-factory/wtf/capture-kit
+plugins: asyncio-1.4.0, anyio-4.14.2
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 31 items
+
+tests/test_intake.py::test_classify_routes_by_token[WTF_20260914_o1_f_neutral_t1.mp4-refs-neutral-o1-front-1] PASSED [  3%]
+tests/test_intake.py::test_classify_routes_by_token[WTF_20260914_o1_s_neutral_t2.mp4-refs-neutral-o1-side-2] PASSED [  6%]
+tests/test_intake.py::test_classify_routes_by_token[WTF_20260914_o2_f_hindi_mono_t1.mp4-face_clips-hindi_mono-o2-front-1] PASSED [  9%]
+tests/test_intake.py::test_classify_routes_by_token[WTF_20260914_o2_f_english_mono_t1.mp4-face_clips-english_mono-o2-front-1] PASSED [ 12%]
+tests/test_intake.py::test_classify_routes_by_token[WTF_20260914_o3_f_casual_t1.mov-face_clips-casual-o3-front-1] PASSED [ 16%]
+tests/test_intake.py::test_classify_routes_by_token[WTF_20260914_o1_f_still_01.jpg-refs-still-o1-front-None] PASSED [ 19%]
+tests/test_intake.py::test_classify_routes_by_token[wtf_20260914_outfit2_side_casual_take3.MP4-face_clips-casual-o2-side-3] PASSED [ 22%]
+tests/test_intake.py::test_classify_audio_extension_wins_over_video_content_token PASSED [ 25%]
+tests/test_intake.py::test_classify_extension_fallback_and_unrecognized_skip PASSED [ 29%]
+tests/test_intake.py::test_classify_system_junk_is_ignored PASSED        [ 32%]
+tests/test_intake.py::test_dry_run_touches_nothing PASSED                [ 35%]
+tests/test_intake.py::test_real_run_copies_writes_manifest_and_preserves_sources PASSED [ 38%]
+tests/test_intake.py::test_second_run_dedupes_identical_content PASSED   [ 41%]
+tests/test_intake.py::test_name_collision_with_different_content_renames PASSED [ 45%]
+tests/test_intake.py::test_zero_byte_file_is_an_error_and_not_copied PASSED [ 48%]
+tests/test_intake.py::test_move_mode_removes_sources PASSED              [ 51%]
+tests/test_intake.py::test_no_hash_mode_still_copies PASSED              [ 54%]
+tests/test_intake.py::test_missing_ffprobe_fails_closed_before_any_write PASSED [ 58%]
+tests/test_intake.py::test_probe_injection_warns_on_short_clip_and_low_resolution PASSED [ 61%]
+tests/test_intake.py::test_probe_injection_failure_for_voice_file_is_error PASSED [ 64%]
+tests/test_intake.py::test_source_equal_to_dest_is_rejected PASSED       [ 67%]
+tests/test_intake.py::test_real_wav_probe_roundtrip PASSED               [ 70%]
+tests/test_intake.py::test_real_video_probe_roundtrip PASSED             [ 74%]
+tests/test_intake.py::test_cli_dry_run_exit_code_and_no_side_effects PASSED [ 77%]
+tests/test_intake.py::test_cli_json_output PASSED                        [ 80%]
+tests/test_intake.py::test_cli_missing_source_returns_2 PASSED           [ 83%]
+tests/test_intake.py::test_cli_unknown_flag_systemexit PASSED            [ 87%]
+tests/test_intake.py::test_cli_self_test_is_offline_and_green PASSED     [ 90%]
+tests/test_intake.py::test_run_level_warning_when_source_has_no_media PASSED [ 93%]
+tests/test_intake.py::test_run_records_os_junk_as_ignored PASSED         [ 96%]
+tests/test_intake.py::test_intake_source_has_no_network_imports PASSED   [100%]
+
+============================== 31 passed in 0.21s ==============================

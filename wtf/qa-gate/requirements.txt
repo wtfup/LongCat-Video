@@ -1,0 +1,10 @@
+# WTF QA Gate — runtime requirements (dark/stub v1)
+# The gate is stdlib-only when PyYAML is unavailable: policy files use a documented
+# subset parsed by a built-in fallback (block/flow maps + scalar values). Install
+# PyYAML for the full YAML spec; the test suite runs on stdlib + pytest alone
+# (e.g. `uv run --no-project --with pytest python -m pytest`).
+PyYAML>=6.0,<7
+# test-only:
+pytest>=8.0
+# Live scoring IFACEs (NOT installed in dark mode; plugged in on the render box):
+# faster-whisper>=1.0  # lip-sync WER scorer (live path, guarded)

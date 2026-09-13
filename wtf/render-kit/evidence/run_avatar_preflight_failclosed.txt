@@ -1,0 +1,12 @@
+ERROR: checkpoint layout incomplete at /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video-Avatar-1.5
+  - missing int8 DiT config (expected: /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video-Avatar-1.5/base_model_int8/config.json)
+  - missing int8 DiT weights (expected /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video-Avatar-1.5/base_model_int8/quantized_model.safetensors.index.json or *.safetensors shards in /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video-Avatar-1.5/base_model_int8)
+  - missing distill LoRA (dmd) (expected: /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video-Avatar-1.5/lora/dmd_lora.safetensors)
+  - missing v1.5 scheduler dir (expected non-empty dir: /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video-Avatar-1.5/scheduler)
+  - missing Whisper-large-v3 audio encoder (expected non-empty dir: /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video-Avatar-1.5/whisper-large-v3)
+  - missing vocal separator model (expected: /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video-Avatar-1.5/vocal_separator/Kim_Vocal_2.onnx)
+  - missing foundation tokenizer (expected non-empty dir: /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video/tokenizer)
+  - missing foundation text_encoder (expected non-empty dir: /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video/text_encoder)
+  - missing foundation vae (expected non-empty dir: /Users/vishalnigammacminioffice/wtf-avatar-factory/weights/LongCat-Video/vae)
+  (0 required paths present). Run download_weights.sh first.
+EXIT=2

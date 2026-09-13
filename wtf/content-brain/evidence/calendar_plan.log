@@ -1,0 +1,115 @@
+$ python calendar.py --days 7 --start 2026-09-14 --json
+===================================================
+{
+  "generated_by": "w4-content-brain",
+  "start": "2026-09-14",
+  "days": 7,
+  "per_day": 1,
+  "slots": [
+    {
+      "slot_index": 0,
+      "date": "2026-09-14",
+      "weekday": "monday",
+      "pillar": "ai_systems",
+      "topic_id": "ai_systems-01",
+      "brief_id": "cb-2026-09-14-ai_systems-01",
+      "brand": "wtf_gyms",
+      "format": "9:16_vertical_reel",
+      "duration_s": 45,
+      "languages": [
+        "en",
+        "hi"
+      ]
+    },
+    {
+      "slot_index": 0,
+      "date": "2026-09-15",
+      "weekday": "tuesday",
+      "pillar": "founder_journey",
+      "topic_id": "founder_journey-01",
+      "brief_id": "cb-2026-09-15-founder_journey-01",
+      "brand": "wtf_gyms",
+      "format": "9:16_vertical_reel",
+      "duration_s": 45,
+      "languages": [
+        "en",
+        "hi"
+      ]
+    },
+    {
+      "slot_index": 0,
+      "date": "2026-09-16",
+      "weekday": "wednesday",
+      "pillar": "wtf_brands",
+      "topic_id": "wtf_brands-01",
+      "brief_id": "cb-2026-09-16-wtf_brands-01",
+      "brand": "wtf_academy",
+      "format": "9:16_vertical_reel",
+      "duration_s": 45,
+      "languages": [
+        "en",
+        "hi"
+      ]
+    },
+    {
+      "slot_index": 0,
+      "date": "2026-09-17",
+      "weekday": "thursday",
+      "pillar": "fitness_transformation",
+      "topic_id": "fitness_transformation-01",
+      "brief_id": "cb-2026-09-17-fitness_transformation-01",
+      "brand": "wtf_gyms",
+      "format": "9:16_vertical_reel",
+      "duration_s": 45,
+      "languages": [
+        "en",
+        "hi"
+      ]
+    },
+    {
+      "slot_index": 0,
+      "date": "2026-09-18",
+      "weekday": "friday",
+      "pillar": "business",
+      "topic_id": "business-01",
+      "brief_id": "cb-2026-09-18-business-01",
+      "brand": "wtf_gyms",
+      "format": "9:16_vertical_reel",
+      "duration_s": 45,
+      "languages": [
+        "en",
+        "hi"
+      ]
+    },
+    {
+      "slot_index": 0,
+      "date": "2026-09-19",
+      "weekday": "saturday",
+      "pillar": "fitness_transformation",
+      "topic_id": "fitness_transformation-02",
+      "brief_id": "cb-2026-09-19-fitness_transformation-02",
+      "brand": "wtf_gyms",
+      "format": "9:16_vertical_reel",
+      "duration_s": 45,
+      "languages": [
+        "en",
+        "hi"
+      ]
+    },
+    {
+      "slot_index": 0,
+      "date": "2026-09-20",
+      "weekday": "sunday",
+      "pillar": "wtf_brands",
+      "topic_id": "wtf_brands-02",
+      "brief_id": "cb-2026-09-20-wtf_brands-02",
+      "brand": "everyday",
+      "format": "9:16_vertical_reel",
+      "duration_s": 45,
+      "languages": [
+        "en",
+        "hi"
+      ]
+    }
+  ]
+}
